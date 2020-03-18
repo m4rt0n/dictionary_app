@@ -27,16 +27,14 @@ namespace Test1
         async void Save_Clicked(object sender, EventArgs e)
         {
             this.contextItem.Name = (nameEntry.Text);
-            this.contextItem.Name = (noteEntry.Text);
+            this.contextItem.Note = (noteEntry.Text);
 
             if (this.contextItem.Id == 0)
-            {
-                //this.contextItem.InsertIntoDatabase();
+            {               
                 await App.Database.AddItemAsync(this.contextItem);
             }
             else
-            {
-                //this.contextItem.UpdateToDatabase();
+            {                
                 await App.Database.UpdateItemAsync(this.contextItem);
             }
         }

@@ -12,6 +12,7 @@ namespace Test1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ItemList : ContentPage
     {
+
         public ItemList()
         {
             InitializeComponent();
@@ -31,41 +32,21 @@ namespace Test1
             if (item == null)
                 item = new ItemModel();
 
-
             await Navigation.PushAsync(new AddOrUpdate(item as ItemModel));
+        }
 
+        async void Del_Clicked(object sender, EventArgs e)
+        {
+            var item = listView.SelectedItem as ItemModel;
+            await App.Database.DeleteItemAsync(item);           
         }
     }
 }
+
 /*
- * private void Button_Clicked(object sender, EventArgs e)
-        {
-            var item = listView.SelectedItem as Model;
+ * xaml -- ItemsSource="{Binding Items}" 
+ * 
+ ObservableCollection
 
-            // or
-            if (item == null)
-                item = new Model();
-
-
-            Navigation.PushAsync(new EditPage(item as Model, additemtolist));
-            Navigation.PushAsync(new EditPage(item as Model, (item)=>Items.Add(item)));
-        }
-
-    async void Update_Clicked(object sender, EventArgs args)
-        {
-            WordListPage back = new WordListPage();
-
-                var updateword = (Word)BindingContext;
-                await App.Database.UpdateWordAsync(updateword);
-            
-            await Navigation.PushAsync(back);
-        }
-
-     async void Save_Clicked(object sender, EventArgs e)
-        {
-            
-            var savedWord = (Word)BindingContext;            
-            await App.Database.AddWordAsync(savedWord);
-            await Navigation.PopAsync();
-        }
+ OnPropertyChanged
 */

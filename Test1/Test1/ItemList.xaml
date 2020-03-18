@@ -4,12 +4,12 @@
              x:Class="Test1.ItemList"
              Title="{Binding Title}">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="AddOrUpdate" Clicked="AddOrUpdate_Clicked" />
-        
+        <ToolbarItem Text="Add/Update" Clicked="AddOrUpdate_Clicked" />
+        <ToolbarItem Text="Del" Clicked="Del_Clicked" />
     </ContentPage.ToolbarItems>
     
     <ListView x:Name="listView"
-              ItemsSource="{Binding Items}" 
+              
               SelectionMode="Single"
               Margin="20">
 

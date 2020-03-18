@@ -30,6 +30,11 @@ namespace Test1
         {
             return _database.UpdateAsync(item);
         }
+
+        public Task<int> DeleteItemAsync(ItemModel item)
+        {
+            return _database.DeleteAsync(item);
+        }
     }
 
     
