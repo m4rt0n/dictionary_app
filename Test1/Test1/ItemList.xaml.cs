@@ -40,6 +40,23 @@ namespace Test1
             var item = listView.SelectedItem as ItemModel;
             await App.Database.DeleteItemAsync(item);           
         }
+
+        async void Photo_Clicked(object sender, EventArgs e)
+        {
+            
+            var photo = new ItemModel();
+            await Navigation.PushAsync(new Photo(photo as ItemModel));
+
+            //Photo takePhoto = new Photo();
+            //await Navigation.PushAsync(takePhoto);
+            /*
+             var makePhoto = (Photo)BindingContext;
+            await Navigation.PushAsync(new PhotoPage
+            {
+                BindingContext = makePhoto as Photo
+            });
+            */
+        }
     }
 }
 
