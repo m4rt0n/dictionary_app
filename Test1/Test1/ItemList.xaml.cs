@@ -6,12 +6,30 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
+using System.Diagnostics;
+using System.IO;
 
 namespace Test1
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ItemList : ContentPage
     {
+        private ItemModel contextItem;
+
+        ImageSource _photoSource;
+        public ImageSource PhotoSource
+        {
+            get => _photoSource;
+            set
+            {
+                _photoSource = value;
+                OnPropertyChanged();
+            }
+        }
+
+        
 
         public ItemList()
         {
@@ -22,6 +40,7 @@ namespace Test1
         {
             base.OnAppearing();
             listView.ItemsSource = await App.Database.GetItemsAsync();
+
         }
 
         async void AddOrUpdate_Clicked(object sender, EventArgs e)
@@ -48,16 +67,14 @@ namespace Test1
             await Navigation.PushAsync(new Photo(item as ItemModel));                       
         }
 
+
+
+        // bind image byte[] from db
         /*
-        public ImageSource MyImageSource
-        {
-            get
-            { 
-                return ImageSource.FromResource();
-            }
-        }
-        // PicturePath
-        */
+        ImageSource source = ImageSource.FromStream(() => new MemoryStream(this.contextItem.ImageData));
+        PhotoSource = source;
+        */    
+        
     }
 }
 

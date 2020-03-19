@@ -104,7 +104,7 @@ namespace Test1
 
             //------------------------------------------------------------------------------------------------------------------------------------------------
 
-            /*
+            
             this.contextItem.ImageData = binaryData;
             if (this.contextItem.Id == 0)
             {
@@ -116,9 +116,9 @@ namespace Test1
                 await App.Database.UpdateItemAsync(this.contextItem);
                 await DisplayAlert("photo updated", this.contextItem.Id.ToString(), "OK");
             }
-            */
-
             
+
+            /*
             this.contextItem.PicturePath = PhotoPath;
             if (this.contextItem.Id == 0)
             {
@@ -130,7 +130,7 @@ namespace Test1
                 await App.Database.UpdateItemAsync(this.contextItem);
                 await DisplayAlert("photo updated", PhotoPath, "OK"); //this.contextItem.Id.ToString()
             }
-            
+            */
 
 
 
