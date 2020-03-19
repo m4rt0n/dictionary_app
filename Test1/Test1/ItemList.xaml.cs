@@ -16,21 +16,7 @@ namespace Test1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ItemList : ContentPage
     {
-        private ItemModel contextItem;
-
-        ImageSource _photoSource;
-        public ImageSource PhotoSource
-        {
-            get => _photoSource;
-            set
-            {
-                _photoSource = value;
-                OnPropertyChanged();
-            }
-        }
-
-        
-
+       
         public ItemList()
         {
             InitializeComponent();
@@ -67,14 +53,24 @@ namespace Test1
             await Navigation.PushAsync(new Photo(item as ItemModel));                       
         }
 
-
-
-        // bind image byte[] from db
         /*
+       private ItemModel contextItem;
+
+       ImageSource _photoSource;
+       public ImageSource PhotoSource
+       {
+           get => _photoSource;
+           set
+           {
+               _photoSource = value;
+               OnPropertyChanged();
+           }
+       }
+      
         ImageSource source = ImageSource.FromStream(() => new MemoryStream(this.contextItem.ImageData));
         PhotoSource = source;
-        */    
-        
+        */
+
     }
 }
 
