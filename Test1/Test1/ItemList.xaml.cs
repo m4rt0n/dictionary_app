@@ -43,26 +43,25 @@ namespace Test1
 
         async void Photo_Clicked(object sender, EventArgs e)
         {
+            var item = listView.SelectedItem as ItemModel;
             
-            var photo = new ItemModel();
-            await Navigation.PushAsync(new Photo(photo as ItemModel));
-
-            //Photo takePhoto = new Photo();
-            //await Navigation.PushAsync(takePhoto);
-            /*
-             var makePhoto = (Photo)BindingContext;
-            await Navigation.PushAsync(new PhotoPage
-            {
-                BindingContext = makePhoto as Photo
-            });
-            */
+            await Navigation.PushAsync(new Photo(item as ItemModel));                       
         }
+
+        /*
+        public ImageSource MyImageSource
+        {
+            get
+            { 
+                return ImageSource.FromResource();
+            }
+        }
+        // PicturePath
+        */
     }
 }
 
-/*
- * xaml -- ItemsSource="{Binding Items}" 
- * 
+/* 
  ObservableCollection
 
  OnPropertyChanged
