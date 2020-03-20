@@ -13,21 +13,23 @@ namespace Test1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddOrUpdate : ContentPage
     {
-        private ItemModel contextItem;
+        private WordModel contextItem;
 
-        public AddOrUpdate(ItemModel item)
+        public AddOrUpdate(WordModel addOrUpdateWord)
         {
-            this.contextItem = item;
+            this.contextItem = addOrUpdateWord;
 
             InitializeComponent();
-            nameEntry.Text = item.Name;
-            noteEntry.Text = item.Note;
+            pWordEngEntry.Text = addOrUpdateWord.WordEng;
+            pWordRusEntry.Text = addOrUpdateWord.WordRus;
+            pWordNoteEntry.Text = addOrUpdateWord.WordNote;
         }
 
         async void Save_Clicked(object sender, EventArgs e)
         {
-            this.contextItem.Name = (nameEntry.Text);
-            this.contextItem.Note = (noteEntry.Text);
+            this.contextItem.WordEng = (pWordEngEntry.Text);
+            this.contextItem.WordRus = (pWordRusEntry.Text);
+            this.contextItem.WordNote = (pWordNoteEntry.Text);
 
             if (this.contextItem.Id == 0)
             {               

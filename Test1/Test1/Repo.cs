@@ -13,27 +13,27 @@ namespace Test1
         public Repo(string dbPath)
         {
             _database = new SQLiteAsyncConnection(dbPath);
-            _database.CreateTableAsync<ItemModel>().Wait();
+            _database.CreateTableAsync<WordModel>().Wait();
         }
 
-        public Task<List<ItemModel>> GetItemsAsync()
+        public Task<List<WordModel>> GetItemsAsync()
         {
-            return _database.Table<ItemModel>().ToListAsync();
+            return _database.Table<WordModel>().ToListAsync();
         }
 
-        public Task<int> AddItemAsync(ItemModel item)
+        public Task<int> AddItemAsync(WordModel newWord)
         {
-            return _database.InsertAsync(item);
+            return _database.InsertAsync(newWord);
         }
 
-        public Task<int> UpdateItemAsync(ItemModel item)
+        public Task<int> UpdateItemAsync(WordModel updateWord)
         {
-            return _database.UpdateAsync(item);
+            return _database.UpdateAsync(updateWord);
         }
 
-        public Task<int> DeleteItemAsync(ItemModel item)
+        public Task<int> DeleteItemAsync(WordModel deleteWord)
         {
-            return _database.DeleteAsync(item);
+            return _database.DeleteAsync(deleteWord);
         }
     }
 

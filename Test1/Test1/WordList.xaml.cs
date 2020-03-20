@@ -14,10 +14,10 @@ using System.IO;
 namespace Test1
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ItemList : ContentPage
+    public partial class WordList : ContentPage
     {
        
-        public ItemList()
+        public WordList()
         {
             InitializeComponent();
             
@@ -32,31 +32,31 @@ namespace Test1
         async void AddOrUpdate_Clicked(object sender, EventArgs e)
         {
             //select to update
-            var item = listView.SelectedItem as ItemModel;
+            var item = listView.SelectedItem as WordModel;
             //add new
             if (item == null)
-                item = new ItemModel();
+                item = new WordModel();
 
-            await Navigation.PushAsync(new AddOrUpdate(item as ItemModel));
+            await Navigation.PushAsync(new AddOrUpdate(item as WordModel));
         }
 
         async void Del_Clicked(object sender, EventArgs e)
         {
-            var item = listView.SelectedItem as ItemModel;
+            var item = listView.SelectedItem as WordModel;
             await App.Database.DeleteItemAsync(item);           
         }
 
         async void Photo_Clicked(object sender, EventArgs e)
         {
-            var item = listView.SelectedItem as ItemModel;
+            var item = listView.SelectedItem as WordModel;
             
-            await Navigation.PushAsync(new Photo(item as ItemModel));                       
+            await Navigation.PushAsync(new Photo(item as WordModel));                       
         }
 
         async void Profile_Clicked(object sender, EventArgs e)
         {
-            var item = listView.SelectedItem as ItemModel;
-            await Navigation.PushAsync(new Profile(item as ItemModel));
+            var item = listView.SelectedItem as WordModel;
+            await Navigation.PushAsync(new Profile(item as WordModel));
         }
 
 

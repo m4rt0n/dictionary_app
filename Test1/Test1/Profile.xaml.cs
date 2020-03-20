@@ -12,17 +12,19 @@ namespace Test1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Profile : ContentPage
     {
-        private ItemModel contextItem;
+        private WordModel contextItem;
 
-        public Profile(ItemModel item)
+        public Profile(WordModel wordProfile)
         {
-            this.contextItem = item;
+            this.contextItem = wordProfile;
 
             InitializeComponent();
 
-            Pname.Text = item.Name;
-            Pnote.Text = item.Note;
-            Ppath.Source = item.PicturePath;
+            profWordPicturePath.Source = wordProfile.WordPicturePath;
+            profWordEng.Text = wordProfile.WordEng;
+            profWordRus.Text = wordProfile.WordRus;
+            profWordNote.Text = wordProfile.WordNote;
+            
         }
     }
 }

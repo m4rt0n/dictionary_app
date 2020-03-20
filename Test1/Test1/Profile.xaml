@@ -7,11 +7,13 @@
              x:Class="Test1.Profile">
     <ContentPage.Content>
         <StackLayout>
-            <Image Source="{Binding PicturePath}" x:Name="Ppath" 
+            <Image Source="{Binding WordPicturePath}" x:Name="profWordPicturePath" 
                    HeightRequest="200" WidthRequest="200"/>
-            <Label Text="{Binding Name}" x:Name="Pname" 
+            <Label Text="{Binding WordEng}" x:Name="profWordEng" 
                   HorizontalOptions="Center" FontSize="Medium"/>
-            <Label Text="{Binding Note}" x:Name="Pnote" 
+            <Label Text="{Binding WordRus}" x:Name="profWordRus" 
+                  HorizontalOptions="Center" FontSize="Medium"/>
+            <Label Text="{Binding WordNote}" x:Name="profWordNote" 
                   HorizontalOptions="Center" FontSize="Medium"/>
         </StackLayout>
     </ContentPage.Content>

@@ -24,7 +24,7 @@ namespace Test1
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new ItemList());
+            MainPage = new NavigationPage(new WordList());
         }
 
         protected override void OnStart()

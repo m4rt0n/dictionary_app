@@ -5,13 +5,14 @@ using SQLite;
 
 namespace Test1
 {
-   public class ItemModel
+   public class WordModel
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Note { get; set; }
-        public string PicturePath { get; set; }
+        public string WordEng { get; set; }
+        public string WordRus { get; set; }
+        public string WordNote { get; set; }
+        public string WordPicturePath { get; set; }
         //public byte[] ImageData { get; set; }
     }
 }

@@ -7,8 +7,9 @@
              x:Class="Test1.AddOrUpdate">
     <ContentPage.Content>
         <StackLayout>
-            <Entry x:Name="nameEntry"/>
-            <Entry x:Name="noteEntry"/>
+            <Entry x:Name="pWordEngEntry"/>
+            <Entry x:Name="pWordRusEntry"/>
+            <Entry x:Name="pWordNoteEntry"/>
             <Button Text="save" Clicked="Save_Clicked"/>
         </StackLayout>
     </ContentPage.Content>

@@ -21,7 +21,7 @@ namespace Test1
     
     public partial class Photo : ContentPage, INotifyPropertyChanged
     {
-        private ItemModel contextItem;
+        private WordModel contextItem;
 
         const string _picsDir = @"\storage\emulated\0\android\data\com.companyname.camtest\files\Pictures\";
         string _photoPath = Path.Combine(_picsDir + "SomeJpegNameAssociatedWithTheItemWhichWasPulledFromDatabase.jpg");
@@ -47,7 +47,7 @@ namespace Test1
             }
         }
 
-        public Photo(ItemModel photo)
+        public Photo(WordModel photo)
         {
             InitializeComponent();
             this.contextItem = photo;
@@ -104,7 +104,7 @@ namespace Test1
 
             //------------------------------------------------------------------------------------------------------------------------------------------------
            
-            this.contextItem.PicturePath = PhotoPath;
+            this.contextItem.WordPicturePath = PhotoPath;
             if (this.contextItem.Id == 0)
             {
                 await App.Database.AddItemAsync(this.contextItem);

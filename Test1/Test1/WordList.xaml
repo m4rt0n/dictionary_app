@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="Test1.ItemList"
+             x:Class="Test1.WordList"
              Title="{Binding Title}">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add/Update" Clicked="AddOrUpdate_Clicked" />
@@ -19,9 +19,10 @@
             <DataTemplate>
                 <ViewCell>
                     <StackLayout Orientation = "Horizontal" Margin = "10,10,10,10">
-                        <Image Source="{Binding PicturePath}" />
-                        <Label  Text="{Binding Name}"/>
-                        <Label  Text="{Binding Note}"/>
+                        <Image Source="{Binding WordPicturePath}" />
+                        <Label  Text="{Binding WordEng}"/>
+                        <Label  Text="{Binding WordRus}"/>
+                        <Label  Text="{Binding WordNote}"/>
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>
