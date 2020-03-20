@@ -53,6 +53,13 @@ namespace Test1
             await Navigation.PushAsync(new Photo(item as ItemModel));                       
         }
 
+        async void Profile_Clicked(object sender, EventArgs e)
+        {
+            var item = listView.SelectedItem as ItemModel;
+            await Navigation.PushAsync(new Profile(item as ItemModel));
+        }
+
+
         /*
        private ItemModel contextItem;
 
