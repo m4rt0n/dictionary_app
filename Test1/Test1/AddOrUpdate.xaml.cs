@@ -39,6 +39,7 @@ namespace Test1
             {                
                 await App.Database.UpdateItemAsync(this.contextItem);
             }
+            await Application.Current.MainPage.Navigation.PopAsync();
         }
     }
 }
