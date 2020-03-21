@@ -31,9 +31,8 @@ namespace Test1
 
         async void AddOrUpdate_Clicked(object sender, EventArgs e)
         {
-            //select to update
-            var item = listView.SelectedItem as WordModel;
-            //add new
+           
+            var item = listView.SelectedItem as WordModel;            
             if (item == null)
                 item = new WordModel();
 
@@ -45,44 +44,16 @@ namespace Test1
             var item = listView.SelectedItem as WordModel;
             await App.Database.DeleteItemAsync(item);           
         }
-
-        async void Photo_Clicked(object sender, EventArgs e)
-        {
-            var item = listView.SelectedItem as WordModel;
-            
-            await Navigation.PushAsync(new Photo(item as WordModel));                       
-        }
-
-        async void Profile_Clicked(object sender, EventArgs e)
-        {
-            var item = listView.SelectedItem as WordModel;
-            await Navigation.PushAsync(new Profile(item as WordModel));
-        }
-
-
-        /*
-       private ItemModel contextItem;
-
-       ImageSource _photoSource;
-       public ImageSource PhotoSource
-       {
-           get => _photoSource;
-           set
-           {
-               _photoSource = value;
-               OnPropertyChanged();
-           }
-       }
       
-        ImageSource source = ImageSource.FromStream(() => new MemoryStream(this.contextItem.ImageData));
-        PhotoSource = source;
-        */
+        async void Profile_Clicked(object sender, EventArgs e)
+        {          
+            var item = listView.SelectedItem as WordModel;
 
+            if (item == null)
+            { await DisplayAlert("no item selected", "tap to select", "OK"); }           
+            else
+            { await Navigation.PushAsync(new Profile(item as WordModel)); }
+        }       
     }
 }
 
-/* 
- ObservableCollection
-
- OnPropertyChanged
-*/

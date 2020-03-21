@@ -11,6 +11,7 @@
             <Entry x:Name="pWordRusEntry"/>
             <Entry x:Name="pWordNoteEntry"/>
             <Button Text="save" Clicked="Save_Clicked"/>
+            <Button Text="photo" Clicked="Photo_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

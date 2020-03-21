@@ -41,5 +41,10 @@ namespace Test1
             }
             await Application.Current.MainPage.Navigation.PopAsync();
         }
+        async void Photo_Clicked(object sender, EventArgs e)
+        {           
+            var item = this.contextItem;
+            await Navigation.PushAsync(new Photo(item as WordModel));            
+        }
     }
 }

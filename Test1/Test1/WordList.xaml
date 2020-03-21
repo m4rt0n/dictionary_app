@@ -6,7 +6,7 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add/Update" Clicked="AddOrUpdate_Clicked" />
         <ToolbarItem Text="Del" Clicked="Del_Clicked" />
-        <ToolbarItem Text="Photo" Clicked="Photo_Clicked" />
+        
         <ToolbarItem Text="Profile" Clicked="Profile_Clicked" />
     </ContentPage.ToolbarItems>
     
