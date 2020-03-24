@@ -23,8 +23,8 @@ namespace Test1
             profWordPicturePath.Source = wordProfile.WordPicturePath;
             profWordEng.Text = wordProfile.WordEng;
             profWordRus.Text = wordProfile.WordRus;
-            profWordNote.Text = wordProfile.WordNote;
-            
+            profWordNote.Text = wordProfile.WordNote;           
         }
+       
     }
 }

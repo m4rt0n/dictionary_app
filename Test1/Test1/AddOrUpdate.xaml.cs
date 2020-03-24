@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Test1
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AddOrUpdate : ContentPage
+    public partial class AddOrUpdate : ContentPage, INotifyPropertyChanged
     {
         private WordModel contextItem;
 
@@ -23,6 +23,7 @@ namespace Test1
             pWordEngEntry.Text = addOrUpdateWord.WordEng;
             pWordRusEntry.Text = addOrUpdateWord.WordRus;
             pWordNoteEntry.Text = addOrUpdateWord.WordNote;
+            pWordPhoto.Source = addOrUpdateWord.WordPicturePath;
         }
 
         async void Save_Clicked(object sender, EventArgs e)
@@ -41,6 +42,7 @@ namespace Test1
             }
             await Application.Current.MainPage.Navigation.PopAsync();
         }
+
         async void Photo_Clicked(object sender, EventArgs e)
         {           
             var item = this.contextItem;

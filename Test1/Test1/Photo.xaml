@@ -8,15 +8,8 @@
     <ContentPage.Content>
         <StackLayout Spacing="10" Padding="10">
             <Button x:Name="takePhoto" Text="Take Photo" Clicked="PhotoButton_Clicked"/>
-
             <Image x:Name="image" HeightRequest="300" WidthRequest="300" 
-                   Source="{Binding PhotoPath, UpdateSourceEventName=PropertyChanged}"
-                   BackgroundColor="Red"/>
-
-            <Image x:Name="image2" HeightRequest="300" WidthRequest="300" 
-                   Source="{Binding PhotoSource, UpdateSourceEventName=PropertyChanged}"
-                   BackgroundColor="Green"/>
-
+                   Source="{Binding PhotoPath, UpdateSourceEventName=PropertyChanged}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

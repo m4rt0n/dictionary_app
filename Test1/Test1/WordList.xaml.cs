@@ -26,8 +26,20 @@ namespace Test1
         {
             base.OnAppearing();
             listView.ItemsSource = await App.Database.GetItemsAsync();
+            /*
+            listView.SelectedItem.Clear();
+            ((ListView)sender).SelectedItem = null;
+            myListView.SelectedItem = null;
+
+            foreach (ListViewItem i in myListView.SelectedItems)
+            {
+                i.IsSelected = false;
+            }
+
+            */
 
         }
+        
 
         async void AddOrUpdate_Clicked(object sender, EventArgs e)
         {
@@ -37,6 +49,7 @@ namespace Test1
                 item = new WordModel();
 
             await Navigation.PushAsync(new AddOrUpdate(item as WordModel));
+            
         }
 
         async void Del_Clicked(object sender, EventArgs e)
@@ -53,7 +66,8 @@ namespace Test1
             { await DisplayAlert("no item selected", "tap to select", "OK"); }           
             else
             { await Navigation.PushAsync(new Profile(item as WordModel)); }
-        }       
+            
+        }
     }
 }
 

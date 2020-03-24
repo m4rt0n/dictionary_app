@@ -35,18 +35,7 @@ namespace Test1
                 OnPropertyChanged();
             }
         }
-
-        ImageSource _photoSource;
-        public ImageSource PhotoSource
-        {
-            get => _photoSource;
-            set
-            {
-                _photoSource = value;
-                OnPropertyChanged();
-            }
-        }
-
+        
         public Photo(WordModel photo)
         {
             InitializeComponent();
@@ -91,16 +80,7 @@ namespace Test1
 
             //await DisplayAlert("blabla?", msg, "blabla.");
 
-            PhotoPath = photo.Path;
-
-            // v2: using database to store image
-            string stringToBeSavedToDb = photo.GetStream().ConvertToBase64();
-            byte[] binaryData = Convert.FromBase64String(stringToBeSavedToDb);
-            ImageSource source = ImageSource.FromStream(() => new MemoryStream(binaryData));
-
-            Debug.WriteLine($"---> DEBUG MESSAGE: {nameof(stringToBeSavedToDb)}.Count() = {stringToBeSavedToDb.Count()} <---");
-
-            PhotoSource = source;
+            PhotoPath = photo.Path;            
 
             //------------------------------------------------------------------------------------------------------------------------------------------------
            
@@ -114,34 +94,7 @@ namespace Test1
             {
                 await App.Database.UpdateItemAsync(this.contextItem);
                 await DisplayAlert("photo updated", PhotoPath, "OK"); //this.contextItem.Id.ToString()
-            }
-
-            /*
-            this.contextItem.ImageData = binaryData;
-            if (this.contextItem.Id == 0)
-            {
-                await App.Database.AddItemAsync(this.contextItem);
-                await DisplayAlert("photo added", this.contextItem.Id.ToString(), "OK");
-            }
-            else
-            {
-                await App.Database.UpdateItemAsync(this.contextItem);
-                await DisplayAlert("photo updated", this.contextItem.Id.ToString(), "OK");
-            }
-            */
+            }           
         }
-    }
-
-    public static class ExtensionMethods
-    {
-        public static string ConvertToBase64(this Stream stream)
-        {
-            var bytes = new Byte[(int)stream.Length];
-
-            stream.Seek(0, SeekOrigin.Begin);
-            stream.Read(bytes, 0, (int)stream.Length);
-
-            return Convert.ToBase64String(bytes);
-        }
-    }
+    }  
 }

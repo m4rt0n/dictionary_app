@@ -10,8 +10,11 @@
             <Entry x:Name="pWordEngEntry"/>
             <Entry x:Name="pWordRusEntry"/>
             <Entry x:Name="pWordNoteEntry"/>
+            <Image x:Name="pWordPhoto" Source="{Binding PhotoPath}"
+                   HeightRequest="100" WidthRequest="100"/>
             <Button Text="save" Clicked="Save_Clicked"/>
             <Button Text="photo" Clicked="Photo_Clicked"/>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
