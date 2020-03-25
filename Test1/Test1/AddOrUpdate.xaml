@@ -9,7 +9,7 @@
         <StackLayout>
             <Entry x:Name="pWordEngEntry"/>
             <Entry x:Name="pWordRusEntry"/>
-            <Entry x:Name="pWordNoteEntry"/>
+            <Editor x:Name="pWordNoteEditor"/>
             <Image x:Name="pWordPhoto" Source="{Binding PhotoPath}"
                    HeightRequest="100" WidthRequest="100"/>
             <Button Text="save" Clicked="Save_Clicked"/>

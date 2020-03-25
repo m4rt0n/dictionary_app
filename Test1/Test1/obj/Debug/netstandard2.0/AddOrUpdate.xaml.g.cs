@@ -23,7 +23,7 @@ namespace Test1 {
         private global::Xamarin.Forms.Entry pWordRusEntry;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Entry pWordNoteEntry;
+        private global::Xamarin.Forms.Editor pWordNoteEditor;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Image pWordPhoto;
@@ -33,7 +33,7 @@ namespace Test1 {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(AddOrUpdate));
             pWordEngEntry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "pWordEngEntry");
             pWordRusEntry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "pWordRusEntry");
-            pWordNoteEntry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "pWordNoteEntry");
+            pWordNoteEditor = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Editor>(this, "pWordNoteEditor");
             pWordPhoto = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Image>(this, "pWordPhoto");
         }
     }

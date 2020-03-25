@@ -35,7 +35,6 @@ namespace Test1
         {
             return _database.DeleteAsync(deleteWord);
         }
-    }
-
-    
+    }        
 }
+     

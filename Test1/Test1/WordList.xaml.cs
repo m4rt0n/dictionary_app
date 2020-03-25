@@ -68,6 +68,12 @@ namespace Test1
             { await Navigation.PushAsync(new Profile(item as WordModel)); }
             
         }
+
+        async void Grid_Clicked(object sender, EventArgs e)
+        {
+            Grid x = new Grid();
+            await Navigation.PushAsync(x);
+        }
     }
 }
 

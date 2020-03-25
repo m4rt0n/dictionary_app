@@ -22,7 +22,7 @@ namespace Test1
             InitializeComponent();
             pWordEngEntry.Text = addOrUpdateWord.WordEng;
             pWordRusEntry.Text = addOrUpdateWord.WordRus;
-            pWordNoteEntry.Text = addOrUpdateWord.WordNote;
+            pWordNoteEditor.Text = addOrUpdateWord.WordNote;
             pWordPhoto.Source = addOrUpdateWord.WordPicturePath;
         }
 
@@ -30,7 +30,7 @@ namespace Test1
         {
             this.contextItem.WordEng = (pWordEngEntry.Text);
             this.contextItem.WordRus = (pWordRusEntry.Text);
-            this.contextItem.WordNote = (pWordNoteEntry.Text);
+            this.contextItem.WordNote = (pWordNoteEditor.Text);
 
             if (this.contextItem.Id == 0)
             {               
