@@ -22,5 +22,28 @@ namespace Test1
             
             collectionView.ItemsSource= await App.Database.GetItemsAsync();
         }
+
+        
+
+       async void OnPictureSelected(object sender, SelectedItemChangedEventArgs e)
+       {
+            //SelectionChangedEventArgs
+
+           var item = collectionView.SelectedItem as WordModel;
+           if (item != null)
+           {
+                await Navigation.PushAsync(new Profile(item as WordModel));
+               
+           }
+
+           
+        }
+
+        /*
+       
+
+
+       */
+
     }
 }

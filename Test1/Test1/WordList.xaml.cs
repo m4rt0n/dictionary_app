@@ -26,6 +26,7 @@ namespace Test1
         {
             base.OnAppearing();
             listView.ItemsSource = await App.Database.GetItemsAsync();
+
             /*
             listView.SelectedItem.Clear();
             ((ListView)sender).SelectedItem = null;
