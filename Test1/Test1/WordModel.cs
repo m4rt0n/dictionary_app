@@ -12,7 +12,6 @@ namespace Test1
         public string WordEng { get; set; }
         public string WordRus { get; set; }
         public string WordNote { get; set; }
-        public string WordPicturePath { get; set; }
-        //public byte[] ImageData { get; set; }
+        public string WordPicturePath { get; set; }       
     }
 }
