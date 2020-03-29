@@ -33,6 +33,13 @@ namespace Test1
             });
         }
         /*
+         List<WordModel> items = await App.Database.SearchItemsAsync(searchString);
+                foreach (var item in items) Items.Add(item);
+
+
+
+
+         
         protected override async void OnAppearing()
         {
             base.OnAppearing();
@@ -90,57 +97,17 @@ namespace Test1
         {
             var keyword = SearchBar.Text;
             listView.ItemsSource =
-            Items.Where(x => x.ToLower().Contains(keyword.ToLower()));
+            
+Items.Where(x => x.WordEng.ToLower().Contains(keyword.ToLower()) || x.WordRus.ToLower().Contains(keyword.ToLower()));
+
         }
-
-
-
-        /*
-         <SearchBar TextChanged="OnTextChanged" />
-         * 
-         * 
-         /*
-        private void SearchCommandExecute()
-    {
-    var tempRecords = _allCustomers.Where(c=>c.FullName.Contains(Text));
-    Customers = new ObservableCollection<Customer>(tempRecords);
-    }
-        */
-
-
-
-        /* 
-        void OnTextChanged(object sender, EventArgs e)
-        {
-            SearchBar searchBar = (SearchBar)sender;
-            listView.ItemsSource = GetSearchResults(searchBar.Text);
-        }
-
-        public static List<string> GetSearchResults(string queryString)
-        {
-            var normalizedQuery = queryString?.ToLower() ?? "";
-            return Items.Where(f => f.ToLowerInvariant().Contains(normalizedQuery)).ToList();
-        }
-        */
-
-        /*
-         <SearchBar x:Name="SearchBar" SearchButtonPressed="Search_clicked" ></SearchBar>
-         * 
-         void Search_Clicked(object sender, EventArgs e)
-        {
-            var keyword = SearchBar.Text;
-            listView.ItemsSource =
-            Items.Where(x => x.ToLower().Contains(keyword.ToLower()));
-        }
-        */
-
-
-
-
 
     }
 }
 
-
+/* 
+  ||
+ Collection.Where(item=>item.stringproperty.ToLower().Contains(searchexpression.ToLower()))       
+*/
 
 

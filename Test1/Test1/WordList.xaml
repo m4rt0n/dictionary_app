@@ -10,7 +10,7 @@
         <ToolbarItem Text="Profile" Clicked="Profile_Clicked" />
     </ContentPage.ToolbarItems>
     <StackLayout>
-        <SearchBar x:Name="SearchBar" SearchButtonPressed="Search_clicked" ></SearchBar>
+        <SearchBar x:Name="SearchBar" SearchButtonPressed="Search_Clicked" ></SearchBar>
         <ListView x:Name="listView"                              
                 SelectionMode="Single"
                 Margin="20">
