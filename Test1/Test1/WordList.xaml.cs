@@ -14,7 +14,7 @@ using System.IO;
 namespace Test1
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class WordList : ContentPage
+    public partial class WordList : ContentPage, INotifyPropertyChanged
     {
         
         public static List<WordModel> Items { get; private set; }
@@ -25,29 +25,22 @@ namespace Test1
             
             Items = new List<WordModel>();
             listView.ItemsSource = Items;
-
+           
             Task.Run(async () =>
             {
                 List<WordModel> items = await App.Database.GetItemsAsync();
                 foreach (var item in items) Items.Add(item);
             });
+            
         }
-        /*
-         List<WordModel> items = await App.Database.SearchItemsAsync(searchString);
-                foreach (var item in items) Items.Add(item);
 
-
-
-
-         
+       
+       /*
         protected override async void OnAppearing()
         {
             base.OnAppearing();
             //listView.ItemsSource = await App.Database.GetItemsAsync();
-
-            
-
-            
+                       
             listView.SelectedItem.Clear();
             ((ListView)sender).SelectedItem = null;
             myListView.SelectedItem = null;
@@ -73,7 +66,8 @@ namespace Test1
         async void Del_Clicked(object sender, EventArgs e)
         {
             var item = listView.SelectedItem as WordModel;
-            await App.Database.DeleteItemAsync(item);           
+            await App.Database.DeleteItemAsync(item);
+            
         }
       
         async void Profile_Clicked(object sender, EventArgs e)
@@ -96,12 +90,12 @@ namespace Test1
         void Search_Clicked(object sender, EventArgs e)
         {
             var keyword = SearchBar.Text;
-            listView.ItemsSource =
-            
-Items.Where(x => x.WordEng.ToLower().Contains(keyword.ToLower()) || x.WordRus.ToLower().Contains(keyword.ToLower()));
-
+            listView.ItemsSource =           
+            Items.Where(x => x.WordEng.ToLower().Contains(keyword.ToLower()) 
+            || x.WordRus.ToLower().Contains(keyword.ToLower()));
         }
 
+        
     }
 }
 
