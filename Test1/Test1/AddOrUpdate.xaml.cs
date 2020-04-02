@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Test1.ViewModels;
 
 namespace Test1
 {
@@ -17,6 +18,8 @@ namespace Test1
 
         public AddOrUpdate(WordModel addOrUpdateWord)
         {
+            this.BindingContext = new WordViewModel();
+
             this.contextItem = addOrUpdateWord;
 
             InitializeComponent();

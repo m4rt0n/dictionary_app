@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Test1.ViewModels;
 
 namespace Test1
 {
@@ -16,6 +17,8 @@ namespace Test1
 
         public Profile(WordModel wordProfile)
         {
+            this.BindingContext = new WordViewModel();
+
             this.contextItem = wordProfile;
 
             InitializeComponent();

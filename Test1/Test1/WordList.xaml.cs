@@ -10,6 +10,7 @@ using Plugin.Media;
 using Plugin.Media.Abstractions;
 using System.Diagnostics;
 using System.IO;
+using Test1.ViewModels;
 
 namespace Test1
 {
@@ -17,16 +18,14 @@ namespace Test1
     public partial class WordList : ContentPage, INotifyPropertyChanged
     {
         
-
-        //public static List<WordModel> Items { get; private set; }
+        public static List<WordModel> Items { get; private set; }
 
         public WordList()
         {
             InitializeComponent();
+            this.BindingContext = new WordViewModel();
 
-            this.BindingContext = new ViewModels.ListViewModel();
-
-            /*
+            
             Items = new List<WordModel>();
             listView.ItemsSource = Items;
            
@@ -35,7 +34,7 @@ namespace Test1
                 List<WordModel> items = await App.Database.GetItemsAsync();
                 foreach (var item in items) Items.Add(item);
             });
-            */
+            
         }
 
        

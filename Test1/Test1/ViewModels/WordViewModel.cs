@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
+using Xamarin.Forms;
+
+
 
 namespace Test1.ViewModels
 {
-    public class BaseViewModel : INotifyPropertyChanged
+    public class WordViewModel: INotifyPropertyChanged
     {
         private WordModel wordmodel;
         public event PropertyChangedEventHandler PropertyChanged;
 
-        protected void OnPropertyChanged(string propertyName)
-        {
-            var handler = PropertyChanged;
-            if (handler != null)
-                handler(this, new PropertyChangedEventArgs(propertyName));
-        }
+        
 
         public int Id
         {
@@ -63,7 +61,13 @@ namespace Test1.ViewModels
                 OnPropertyChanged("WordPicturePath");
             }
         }
+        protected void OnPropertyChanged(string propertyName)
+        {
+            var handler = PropertyChanged;
+            if (handler != null)
+                handler(this, new PropertyChangedEventArgs(propertyName));
+        }
 
-       
     }
+
 }

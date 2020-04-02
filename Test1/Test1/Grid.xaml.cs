@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Test1.ViewModels;
 
 namespace Test1
 {
@@ -14,6 +15,8 @@ namespace Test1
     {
         public Grid()
         {
+            this.BindingContext = new WordViewModel();
+
             InitializeComponent();
         }
         protected override async void OnAppearing()
