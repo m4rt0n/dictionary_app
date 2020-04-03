@@ -10,7 +10,6 @@ using Plugin.Media;
 using Plugin.Media.Abstractions;
 using System.Diagnostics;
 using System.IO;
-using Test1.ViewModels;
 
 namespace Test1
 {
@@ -23,8 +22,6 @@ namespace Test1
         public WordList()
         {
             InitializeComponent();
-            this.BindingContext = new WordViewModel();
-
             
             Items = new List<WordModel>();
             listView.ItemsSource = Items;

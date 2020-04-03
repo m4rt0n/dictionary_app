@@ -2325,11 +2325,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Marton\\source\\repos\\Test1-master\\Test1\\Test1.Android\\Test1.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Marton\\source\\repos\\Test1\\Test1\\Test1.Android\\Test1.Android.csproj",
       "projectName": "Test1.Android",
-      "projectPath": "C:\\Users\\Marton\\source\\repos\\Test1-master\\Test1\\Test1.Android\\Test1.Android.csproj",
+      "projectPath": "C:\\Users\\Marton\\source\\repos\\Test1\\Test1\\Test1.Android\\Test1.Android.csproj",
       "packagesPath": "C:\\Users\\Marton\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Marton\\source\\repos\\Test1-master\\Test1\\Test1.Android\\obj\\",
+      "outputPath": "C:\\Users\\Marton\\source\\repos\\Test1\\Test1\\Test1.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2350,8 +2350,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\Marton\\source\\repos\\Test1-master\\Test1\\Test1\\Test1.csproj": {
-              "projectPath": "C:\\Users\\Marton\\source\\repos\\Test1-master\\Test1\\Test1\\Test1.csproj"
+            "C:\\Users\\Marton\\source\\repos\\Test1\\Test1\\Test1\\Test1.csproj": {
+              "projectPath": "C:\\Users\\Marton\\source\\repos\\Test1\\Test1\\Test1\\Test1.csproj"
             }
           }
         }
