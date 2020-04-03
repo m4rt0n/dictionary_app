@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,43 +17,72 @@ namespace Test1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WordList : ContentPage, INotifyPropertyChanged
     {
-        
+        public ObservableCollection<WordModel> collection { get; set; }
+
         public static List<WordModel> Items { get; private set; }
 
         public WordList()
         {
             InitializeComponent();
-            
+
+
+
+            //Items = new List<WordModel>();
+            //listView.ItemsSource = Items;
+
             Items = new List<WordModel>();
-            listView.ItemsSource = Items;
-           
             Task.Run(async () =>
             {
                 List<WordModel> items = await App.Database.GetItemsAsync();
                 foreach (var item in items) Items.Add(item);
             });
-            
-        }
 
-       
-       /*
+
+            collection = new ObservableCollection<WordModel>(Items);
+            listView.ItemsSource = Items;
+
+            //constructor for list items 
+            /*
+             * public string PhotoPath
+        {
+            get => _photoPath;
+            set
+            {
+                _photoPath = value;
+                OnPropertyChanged();
+            }
+        }
+        */
+            //List<Object> myList = new List<Objects>();
+            //ObservableCollection<Object> myCollection = new ObservableCollection<Object>(myList);
+            //GetList();
+        }
+        /*
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            //listView.ItemsSource = await App.Database.GetItemsAsync();
-                       
-            listView.SelectedItem.Clear();
-            ((ListView)sender).SelectedItem = null;
-            myListView.SelectedItem = null;
+            
+            listView.ItemsSource = await App.Database.GetItemsAsync();
+        }
+        */
 
-            foreach (ListViewItem i in myListView.SelectedItems)
-            {
-                i.IsSelected = false;
-            }            
-        } 
-       */
+            /*
+             * 
+             * List<Employee> employees = new List<Employee>();
+             * ObservableCollection<Employee> sessions = new ObservableCollection<Employee>(employees);           
 
-        async void AddOrUpdate_Clicked(object sender, EventArgs e)
+                 listView.SelectedItem.Clear();
+                 ((ListView)sender).SelectedItem = null;
+                 myListView.SelectedItem = null;
+
+                 foreach (ListViewItem i in myListView.SelectedItems)
+                 {
+                     i.IsSelected = false;
+                 }            
+             
+            */
+
+            async void AddOrUpdate_Clicked(object sender, EventArgs e)
         {
            
             var item = listView.SelectedItem as WordModel;            
@@ -67,9 +97,20 @@ namespace Test1
         {
             var item = listView.SelectedItem as WordModel;
             await App.Database.DeleteItemAsync(item);
-            
+            await DisplayAlert("Delete", item.WordEng, "OK");
+            collection.Remove(item);
+
+
+            //Items.Clear();
+            //listView.ItemsSource = null;
+            //Items.Remove(item);
+            //GetList();
+            //Items.Remove(item);
+            //Items.Refresh();
+            //listView.ItemsSource = null;
+            //Items.Clear();
         }
-      
+
         async void Profile_Clicked(object sender, EventArgs e)
         {          
             var item = listView.SelectedItem as WordModel;
@@ -95,13 +136,33 @@ namespace Test1
             || x.WordRus.ToLower().Contains(keyword.ToLower()));
         }
 
-        
+        void GetList()
+        {
+            Task.Run(async () =>
+                {
+                    List<WordModel> items = await App.Database.GetItemsAsync();
+                    foreach (var item in items) Items.Add(item);
+                });
+        }
+
+        /*
+        protected virtual void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        */
     }
 }
 
-/* 
-  ||
- Collection.Where(item=>item.stringproperty.ToLower().Contains(searchexpression.ToLower()))       
+/*
+ public void RefreshData()
+        {
+            listView.ItemsSource = null;
+            listView.ItemsSource = Items;
+            GetList();
+        }   
 */
 
 

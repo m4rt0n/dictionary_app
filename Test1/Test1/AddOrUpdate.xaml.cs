@@ -34,7 +34,7 @@ namespace Test1
 
             if (this.contextItem.Id == 0)
             {               
-                await App.Database.AddItemAsync(this.contextItem);
+                await App.Database.AddItemAsync(this.contextItem);                
             }
             else
             {                
