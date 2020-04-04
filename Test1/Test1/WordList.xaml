@@ -13,7 +13,8 @@
         <SearchBar x:Name="SearchBar" SearchButtonPressed="Search_Clicked" ></SearchBar>
         <ListView x:Name="listView"                              
                 SelectionMode="Single"
-                Margin="20">
+                Margin="20"
+                  IsPullToRefreshEnabled="True">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>

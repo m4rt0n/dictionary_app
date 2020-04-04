@@ -17,20 +17,11 @@ namespace Test1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WordList : ContentPage, INotifyPropertyChanged
     {
-        public ObservableCollection<WordModel> collection { get; set; }
+        
 
         public static List<WordModel> Items { get; private set; }
 
-        //constructor for list items
-        public ObservableCollection<WordModel> Collection
-        {
-            get => collection;
-            set
-            {
-                collection = value;
-                OnPropertyChanged();
-            }
-        }
+        
 
         public WordList()
         {
@@ -38,19 +29,23 @@ namespace Test1
 
             //Items = new List<WordModel>();
             //listView.ItemsSource = Items;
+            
+            GetList();
 
-            Items = new List<WordModel>();
+            /*
             Task.Run(async () =>
             {
                 List<WordModel> items = await App.Database.GetItemsAsync();
                 foreach (var item in items) Items.Add(item);
             });
+            */
+            listView.ItemsSource = Items;
 
+            listView.RefreshCommand = new Command(() => {               
+                RefreshData();
+                listView.IsRefreshing = false;
+            });           
 
-            Collection = new ObservableCollection<WordModel>(Items);
-            listView.ItemsSource = Collection;
-
-            BindingContext = this;
             /*
             protected override async void OnAppearing()
             {
@@ -88,6 +83,7 @@ namespace Test1
                 await App.Database.DeleteItemAsync(item);
                 await DisplayAlert("Delete", item.WordEng, "OK");
 
+             
                 //Items.Clear();
                 //listView.ItemsSource = null;
                 //Items.Remove(item);
@@ -96,7 +92,7 @@ namespace Test1
                 //Items.Refresh();
                 //listView.ItemsSource = null;
                 //Items.Clear();
-            }
+        }
 
             async void Profile_Clicked(object sender, EventArgs e)
             {
@@ -123,17 +119,27 @@ namespace Test1
                 || x.WordRus.ToLower().Contains(keyword.ToLower()));
             }
 
-            void GetList()
+            public void GetList()
             {
-                Task.Run(async () =>
+            Items = new List<WordModel>();
+            Task.Run(async () =>
                     {
                         List<WordModel> items = await App.Database.GetItemsAsync();
                         foreach (var item in items) Items.Add(item);
                     });
+            //listView.ItemsSource = Items;
             }
 
+        public void RefreshData()
+        {
 
+            listView.ItemsSource = null;
+            
+            GetList();
+            listView.ItemsSource = Items;
         }
+
+    }
     }
 
 
