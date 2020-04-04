@@ -26,72 +26,76 @@ namespace Test1
         public WordList()
         {
             InitializeComponent();
-
-            //Items = new List<WordModel>();
+            
             //listView.ItemsSource = Items;
             
             GetList();
-
-            /*
-            Task.Run(async () =>
-            {
-                List<WordModel> items = await App.Database.GetItemsAsync();
-                foreach (var item in items) Items.Add(item);
-            });
-            */
-            listView.ItemsSource = Items;
-
+                                 
             listView.RefreshCommand = new Command(() => {               
                 RefreshData();
                 listView.IsRefreshing = false;
-            });           
+            });
 
             /*
-            protected override async void OnAppearing()
-            {
-                base.OnAppearing();
 
-                listView.ItemsSource = await App.Database.GetItemsAsync();
-            }
+                 ListView.SelectedItem = null;
+                 listView.SelectedItem.Clear();
 
-                /*
+                 ((ListView)sender).SelectedItem = null;
 
-                     listView.SelectedItem.Clear();
-                     ((ListView)sender).SelectedItem = null;
-                     myListView.SelectedItem = null;
 
-                     foreach (ListViewItem i in myListView.SelectedItems)
-                     {
-                         i.IsSelected = false;
-                     }                       
-                */
+                 foreach (ListViewItem i in myListView.SelectedItems)
+                 {
+                     i.IsSelected = false;
+                 }                       
+            */
         }
-            async void AddOrUpdate_Clicked(object sender, EventArgs e)
+
+        /*
+        ItemTapped="Tapped" 
+         
+        void Tapped(object sender, ItemTappedEventArgs e)
+        {
+            //var tapped = listView.ItemTapped;
+
+            var selected = listView.SelectedItem;
+            var tapped = e.Item;
+            if (selected != null && tapped == selected) listView.SelectedItem = null;
+
+            //if (tapped==selected)
+        }
+
+            */
+
+        /*
+          ItemSelected="OnItemSelected"
+         
+        void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (sender != null && sender is ListView listview)
+            {
+                if (e != null) listView.SelectedItem = null;
+            }
+        }
+        ----------------
+        
+        */
+
+        async void AddOrUpdate_Clicked(object sender, EventArgs e)
             {
 
                 var item = listView.SelectedItem as WordModel;
                 if (item == null)
                     item = new WordModel();
-
                 await Navigation.PushAsync(new AddOrUpdate(item as WordModel));
-
-            }
+                listView.SelectedItem = null;
+        }
         
             async void Del_Clicked(object sender, EventArgs e)
             {
                 var item = listView.SelectedItem as WordModel;
                 await App.Database.DeleteItemAsync(item);
-                await DisplayAlert("Delete", item.WordEng, "OK");
-
-             
-                //Items.Clear();
-                //listView.ItemsSource = null;
-                //Items.Remove(item);
-                //GetList();
-                //Items.Remove(item);
-                //Items.Refresh();
-                //listView.ItemsSource = null;
-                //Items.Clear();
+                await DisplayAlert("Delete", item.WordEng, "OK");                              
         }
 
             async void Profile_Clicked(object sender, EventArgs e)
@@ -102,14 +106,15 @@ namespace Test1
                 { await DisplayAlert("no item selected", "tap to select", "OK"); }
                 else
                 { await Navigation.PushAsync(new Profile(item as WordModel)); }
-
-            }
+            listView.SelectedItem = null;
+        }
 
             async void Grid_Clicked(object sender, EventArgs e)
             {
                 Grid showGrid = new Grid();
                 await Navigation.PushAsync(showGrid);
-            }
+                listView.SelectedItem = null;
+        }
 
             void Search_Clicked(object sender, EventArgs e)
             {
@@ -127,29 +132,22 @@ namespace Test1
                         List<WordModel> items = await App.Database.GetItemsAsync();
                         foreach (var item in items) Items.Add(item);
                     });
-            //listView.ItemsSource = Items;
+                listView.ItemsSource = Items;
             }
 
         public void RefreshData()
         {
 
             listView.ItemsSource = null;
-            
             GetList();
             listView.ItemsSource = Items;
         }
-
     }
     }
 
 
 /*
- public void RefreshData()
-        {
-            listView.ItemsSource = null;
-            listView.ItemsSource = Items;
-            GetList();
-        }   
+ 
 */
 
 
