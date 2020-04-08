@@ -19,25 +19,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="WordList.xaml.cs">
-      <DependentUpon>WordList.xaml</DependentUpon>
+    <Compile Update="WordEditPage.xaml.cs">
+      <DependentUpon>WordEditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="WordDetailPage.xaml.cs">
+      <DependentUpon>WordDetailPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="AddOrUpdate.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Grid.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="WordList.xaml">
+    <EmbeddedResource Update="WordEditPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Photo.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Profile.xaml">
+    <EmbeddedResource Update="WordDetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

@@ -6,11 +6,33 @@
              mc:Ignorable="d"
              x:Class="Test1.MainPage">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="ADD" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <!--Bindings on top level refer to BindingContext-->
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <ListView x:Name="listView" ItemsSource="{Binding Words}" ItemTapped="ListView_ItemTapped" SelectionMode="None">
+            <!--Bindings here refer to one item of the collection-->
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Image x:Name="imgPhoto"
+                                
+                                Source= "{Binding WordPicturePath, 
+                                Mode=OneWay, 
+                                UpdateSourceEventName=PropertyChanged}"/>
+                            <Label WidthRequest="30" Text="{Binding Id}"/>
+                            <Label Text="{Binding WordEng}"/>
+                            <Label Text="{Binding WordRus}"/>
+                            <Label Text="{Binding WordNote}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout>
 
 </ContentPage>
+
