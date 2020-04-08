@@ -40,5 +40,12 @@ namespace Test1
             Word context = new Word();
             Navigation.PushAsync(new WordEditPage(context, Words));
         }
+        void Search_Clicked(object sender, EventArgs e)
+        {
+            var keyword = SearchBar.Text;
+            listView.ItemsSource =
+            Words.Where(x => x.WordEng.ToLower().Contains(keyword.ToLower()));
+            // || x.WordRus.ToLower().Contains(keyword.ToLower()))
+        }
     }
 }

@@ -9,7 +9,7 @@
         <StackLayout Spacing="10" Padding="10">
             <Button x:Name="takePhoto" Text="Take Photo" Clicked="PhotoButton_Clicked"/>
             <Image x:Name="image" HeightRequest="300" WidthRequest="300" 
-                   Source="{Binding PhotoPath, UpdateSourceEventName=PropertyChanged}"/>
+                   Source="{Binding WordPicturePath, UpdateSourceEventName=PropertyChanged}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
