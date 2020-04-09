@@ -113,7 +113,7 @@ namespace Test1
 
             //------------------------------------------------------------------------------------------------------------------------------------------------
 
-            // save path -- ???                    
+                             
             Context.WordPicturePath = PhotoPath;
 
             // update local instance that belongs to items collection
@@ -136,11 +136,13 @@ namespace Test1
             {
                 // update in repository
                 await App.Repo.UpdateItemAsync(original);
+
             }
 
             // Will navigate back to previous page.
             // temp object will be lost (garbage collected)
-            await Navigation.PopAsync();
+            //await Navigation.PopAsync();
+            
         }
     
     }

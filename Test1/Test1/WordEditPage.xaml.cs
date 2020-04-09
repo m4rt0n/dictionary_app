@@ -54,8 +54,11 @@ namespace Test1
 
         private async void toolSave_Clicked(object sender, EventArgs e)
         {
+            // ---------!!!!!!!!!!--------------
+
             // update local instance that belongs to items collection
             original.WordEng = Context.WordEng;
+            original.WordPicturePath = Context.WordPicturePath;
 
             // the original is a new item that doesnt belong anywhere yet
             if (original.Id == 0)
