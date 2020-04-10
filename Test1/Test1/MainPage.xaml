@@ -7,7 +7,8 @@
              x:Class="Test1.MainPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="ADD" Clicked="ToolbarItem_Clicked"/>
+        <ToolbarItem Text="ADD" Clicked="Add_Clicked"/>
+        <ToolbarItem Text="GRID" Clicked="Grid_Clicked"/>
     </ContentPage.ToolbarItems>
 
     <!--Bindings on top level refer to BindingContext-->

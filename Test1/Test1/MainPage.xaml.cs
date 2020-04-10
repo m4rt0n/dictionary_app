@@ -35,11 +35,19 @@ namespace Test1
             Navigation.PushAsync(new WordDetailPage(context, Words));
         }
 
-        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        private void Add_Clicked(object sender, EventArgs e)
         {
             Word context = new Word();
             Navigation.PushAsync(new WordEditPage(context, Words));
         }
+
+        private void Grid_Clicked(object sender, EventArgs e)
+        {
+            Grid showGrid = new Grid();
+            Navigation.PushAsync(showGrid);           
+        }
+
+
         void Search_Clicked(object sender, EventArgs e)
         {
             var keyword = SearchBar.Text;
