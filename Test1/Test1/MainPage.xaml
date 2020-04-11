@@ -28,7 +28,6 @@
                             <Label WidthRequest="30" Text="{Binding Id}"/>
                             <Label Text="{Binding WordEng}"/>
                             <Label Text="{Binding WordRus}"/>
-                            <Label Text="{Binding WordNote}"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

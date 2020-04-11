@@ -26,6 +26,11 @@
                 <Label x:Name="labelId" Text="{Binding Path=Id, Mode=OneWay, UpdateSourceEventName=PropertyChanged}" Grid.Column="1"/>
                 <Label Text="WordEng:" Grid.Row="1"/>
                 <Entry x:Name="entryPropWordEng" Text="{Binding Path=WordEng, UpdateSourceEventName=PropertyChanged}" Grid.Column="1" Grid.Row="1"/>
+                <Label Text="WordRus:" Grid.Row="2"/>
+                <Entry x:Name="entryPropWordRus" Text="{Binding Path=WordRus, UpdateSourceEventName=PropertyChanged}" Grid.Column="1" Grid.Row="2"/>
+                <Label Text="WordNote:" Grid.Row="3"/>
+                <Entry x:Name="entryPropWordNote" Text="{Binding Path=WordNote, UpdateSourceEventName=PropertyChanged}" Grid.Column="1" Grid.Row="3"/>
+
             </Grid>
             <Image x:Name="imgPhoto"
                    HeightRequest="200" WidthRequest="200"

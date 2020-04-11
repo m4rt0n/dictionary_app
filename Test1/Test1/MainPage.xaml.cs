@@ -52,8 +52,8 @@ namespace Test1
         {
             var keyword = SearchBar.Text;
             listView.ItemsSource =
-            Words.Where(x => x.WordEng.ToLower().Contains(keyword.ToLower()));
-            // || x.WordRus.ToLower().Contains(keyword.ToLower()))
+            Words.Where(x => x.WordEng.ToLower().Contains(keyword.ToLower())
+            || x.WordRus.ToLower().Contains(keyword.ToLower()));
         }
     }
 }

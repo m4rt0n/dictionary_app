@@ -9,8 +9,8 @@ namespace Test1
 
         private int id { get; set; }
         private string wordEng;
-        //private string wordRus;
-        //private string wordNote;
+        private string wordRus;
+        private string wordNote;
         private string wordPicturePath;
 
         [PrimaryKey, AutoIncrement]
@@ -39,7 +39,7 @@ namespace Test1
                 OnPropertyChanged("WordEng");
             }
         }
-        /*
+        
         public string WordRus
         {
             get
@@ -64,7 +64,7 @@ namespace Test1
                 OnPropertyChanged("WordNote");
             }
         }
-        */
+        
         public string WordPicturePath
         {
             get

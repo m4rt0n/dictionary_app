@@ -19,21 +19,12 @@
                         <ColumnDefinition Width="70" />
                         <ColumnDefinition Width="80" />
                     </Grid.ColumnDefinitions>
-                    <Image Grid.RowSpan="2"
+                    <Image Grid.RowSpan="3"
                        Source="{Binding WordPicturePath}"                           
                        Aspect="AspectFill"
                        HeightRequest="60"
                        WidthRequest="60" />
-                    <Label Grid.Column="1"
-                       Text="{Binding WordEng}"
-                       FontAttributes="Bold"
-                       LineBreakMode="TailTruncation" />
-                    <Label Grid.Row="1"
-                       Grid.Column="1"
-                       Text="{Binding WordRus}"
-                       LineBreakMode="TailTruncation"
-                       FontAttributes="Italic"
-                       VerticalOptions="End" />
+                    
                 </Grid>
             </DataTemplate>
         </CollectionView.ItemTemplate>

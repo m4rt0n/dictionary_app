@@ -27,7 +27,11 @@
                 <Label x:Name="labelId" Text="{Binding Id, Mode=OneWay, UpdateSourceEventName=PropertyChanged}" Grid.Column="1"/>
                 <Label Text="WordEng:" Grid.Row="1"/>
                 <Label x:Name="labelWordEng" Text="{Binding WordEng, Mode=OneWay, UpdateSourceEventName=PropertyChanged}" Grid.Column="1" Grid.Row="1"/>
-                
+                <Label Text="WordRus:" Grid.Row="2"/>
+                <Label x:Name="labelWordRus" Text="{Binding WordRus, Mode=OneWay, UpdateSourceEventName=PropertyChanged}" Grid.Column="1" Grid.Row="2"/>
+                <Label Text="WordNote:" Grid.Row="3"/>
+                <Label x:Name="labelWordNote" Text="{Binding WordNote, Mode=OneWay, UpdateSourceEventName=PropertyChanged}" Grid.Column="1" Grid.Row="3"/>
+
             </Grid>
             <Image x:Name="imgPhoto"
                    HeightRequest="200" WidthRequest="200"

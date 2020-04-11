@@ -38,6 +38,7 @@ namespace Test1
             // save reference to original
             original = context;
 
+            //shadow/deep copy
             // Create temporary as a copy to bind so that when temp changes
             // through binding, the original will not be modified.
             // If we wouldn't be using a temp object, changes would be applied to
@@ -45,7 +46,9 @@ namespace Test1
             var temp = new Word()
             {
                 Id = original.Id,
-                WordEng = original.WordEng
+                WordEng = original.WordEng,
+                WordRus = original.WordRus,
+                WordNote = original.WordNote
             };
 
             // the temp will be the bound object
@@ -57,10 +60,12 @@ namespace Test1
             // ---------!!!!!!!!!!--------------
 
             // update local instance that belongs to items collection
-            original.WordEng = Context.WordEng;
-            original.WordPicturePath = Context.WordPicturePath;
             original.Id = Context.Id;
-
+            original.WordEng = Context.WordEng;
+            original.WordRus = Context.WordRus;
+            original.WordNote = Context.WordNote;
+            original.WordPicturePath = Context.WordPicturePath;
+            
             // the original is a new item that doesnt belong anywhere yet
             if (original.Id == 0)
             {
