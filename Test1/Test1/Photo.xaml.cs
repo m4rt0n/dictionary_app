@@ -117,6 +117,8 @@ namespace Test1
             Context.WordPicturePath = PhotoPath;
 
             // update local instance that belongs to items collection
+            //--------------------------------
+
             original.WordPicturePath = Context.WordPicturePath;
 
             //this.contextItem.WordPicturePath = PhotoPath;

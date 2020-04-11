@@ -59,6 +59,7 @@ namespace Test1
             // update local instance that belongs to items collection
             original.WordEng = Context.WordEng;
             original.WordPicturePath = Context.WordPicturePath;
+            original.Id = Context.Id;
 
             // the original is a new item that doesnt belong anywhere yet
             if (original.Id == 0)
@@ -87,6 +88,8 @@ namespace Test1
         }
         private void toolPhoto_Clicked(object sender, EventArgs e)
         {
+            //-------------------------------
+
             // pass on the references
             Navigation.PushAsync(new Photo(Context, Words));
         }
