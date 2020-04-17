@@ -28,13 +28,24 @@
                 <Entry x:Name="entryPropWordEng" Text="{Binding Path=WordEng, UpdateSourceEventName=PropertyChanged}" Grid.Column="1" Grid.Row="1"/>
                 <Label Text="WordRus:" Grid.Row="2"/>
                 <Entry x:Name="entryPropWordRus" Text="{Binding Path=WordRus, UpdateSourceEventName=PropertyChanged}" Grid.Column="1" Grid.Row="2"/>
-                <Label Text="WordNote:" Grid.Row="3"/>
-                <Entry x:Name="entryPropWordNote" Text="{Binding Path=WordNote, UpdateSourceEventName=PropertyChanged}" Grid.Column="1" Grid.Row="3"/>
+                
 
             </Grid>
-            <Image x:Name="imgPhoto"
-                   HeightRequest="200" WidthRequest="200"
+            <Frame Padding="10, 10, 10, 10" OutlineColor="Black" 
+                   Margin="100, 0 ">
+                <Image x:Name="imgPhoto"
+                   HeightRequest="250" WidthRequest="250"
                   Source= "{Binding WordPicturePath, Mode=OneWay, UpdateSourceEventName=PropertyChanged}"/>
+            </Frame>
+
+            <Frame Padding="10, 10, 10, 10" OutlineColor="Black" 
+                   Margin="100, 30"
+                   BackgroundColor="Transparent" 
+                   HeightRequest="50" WidthRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand">
+                <Editor x:Name="Note" Text= "{Binding WordNote}" />
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 

@@ -29,13 +29,24 @@
                 <Label x:Name="labelWordEng" Text="{Binding WordEng, Mode=OneWay, UpdateSourceEventName=PropertyChanged}" Grid.Column="1" Grid.Row="1"/>
                 <Label Text="WordRus:" Grid.Row="2"/>
                 <Label x:Name="labelWordRus" Text="{Binding WordRus, Mode=OneWay, UpdateSourceEventName=PropertyChanged}" Grid.Column="1" Grid.Row="2"/>
-                <Label Text="WordNote:" Grid.Row="3"/>
-                <Label x:Name="labelWordNote" Text="{Binding WordNote, Mode=OneWay, UpdateSourceEventName=PropertyChanged}" Grid.Column="1" Grid.Row="3"/>
-
+                
             </Grid>
-            <Image x:Name="imgPhoto"
-                   HeightRequest="200" WidthRequest="200"
+
+            <Frame Padding="10, 10, 10, 10" OutlineColor="Black" 
+                   Margin="100, 0 ">
+                <Image x:Name="imgPhoto"
+                   HeightRequest="250" WidthRequest="250"
                   Source= "{Binding WordPicturePath, Mode=OneWay, UpdateSourceEventName=PropertyChanged}"/>
+            </Frame>
+            
+            <Frame Padding="10, 10, 10, 10" OutlineColor="Black" 
+                   Margin="100, 30"
+                   BackgroundColor="Transparent" 
+                   HeightRequest="50" WidthRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand">
+                <Label x:Name="Note" Text= "{Binding WordNote}" />
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 

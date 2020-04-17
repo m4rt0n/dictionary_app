@@ -19,15 +19,18 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Orientation="Horizontal">
+                        
+                        <StackLayout Orientation="Horizontal"
+                          Padding="2, 2, 2, 2">           
+                            
                             <Image x:Name="imgPhoto"
-                                
+                                Margin="2, 2, 2, 2"
                                 Source= "{Binding WordPicturePath, 
                                 Mode=OneWay, 
                                 UpdateSourceEventName=PropertyChanged}"/>
                             <Label WidthRequest="30" Text="{Binding Id}"/>
-                            <Label Text="{Binding WordEng}"/>
-                            <Label Text="{Binding WordRus}"/>
+                            <Label WidthRequest="30" Text="{Binding WordEng}"/>
+                            <Label WidthRequest="30" Text="{Binding WordRus}"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
