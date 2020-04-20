@@ -7,8 +7,8 @@
              x:Class="Test1.WordEditPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="SAVE" x:Name="toolSave" Clicked="toolSave_Clicked"/>
-        <ToolbarItem Text="PHOTO" x:Name="toolPhoto" Clicked="toolPhoto_Clicked"/>
+        <ToolbarItem Text="SAVE" x:Name="Save" Clicked="Save_Clicked"/>
+        <ToolbarItem Text="PHOTO" x:Name="Photo" Clicked="Photo_Clicked"/>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
@@ -22,11 +22,9 @@
                     <RowDefinition Height="AUTO"/>
                     <RowDefinition Height="AUTO"/>
                 </Grid.RowDefinitions>
-                <Label Text="Id:"/>
-                <Label x:Name="labelId" Text="{Binding Path=Id, Mode=OneWay, UpdateSourceEventName=PropertyChanged}" Grid.Column="1"/>
-                <Label Text="WordEng:" Grid.Row="1"/>
+               <Label Text="English:" Grid.Row="1"/>
                 <Entry x:Name="entryPropWordEng" Text="{Binding Path=WordEng, UpdateSourceEventName=PropertyChanged}" Grid.Column="1" Grid.Row="1"/>
-                <Label Text="WordRus:" Grid.Row="2"/>
+                <Label Text="Russian:" Grid.Row="2"/>
                 <Entry x:Name="entryPropWordRus" Text="{Binding Path=WordRus, UpdateSourceEventName=PropertyChanged}" Grid.Column="1" Grid.Row="2"/>
                 
 

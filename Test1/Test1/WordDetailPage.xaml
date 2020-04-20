@@ -7,8 +7,8 @@
              x:Class="Test1.WordDetailPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="DELETE" x:Name="toolDel" Clicked="toolDel_Clicked" IsEnabled="{Binding CanDelete}"/>
-        <ToolbarItem Text="EDIT" x:Name="toolEdit" Clicked="toolEdit_Clicked"/>
+        <ToolbarItem Text="DELETE" x:Name="Delete" Clicked="Delete_Clicked" IsEnabled="{Binding CanDelete}"/>
+        <ToolbarItem Text="EDIT" x:Name="Edit" Clicked="Edit_Clicked"/>
         
     </ContentPage.ToolbarItems>
 
@@ -23,11 +23,9 @@
                     <RowDefinition Height="AUTO"/>
                     <RowDefinition Height="AUTO"/>
                 </Grid.RowDefinitions>
-                <Label Text="Id:"/>
-                <Label x:Name="labelId" Text="{Binding Id, Mode=OneWay, UpdateSourceEventName=PropertyChanged}" Grid.Column="1"/>
-                <Label Text="WordEng:" Grid.Row="1"/>
+                <Label Text="English:" Grid.Row="1"/>
                 <Label x:Name="labelWordEng" Text="{Binding WordEng, Mode=OneWay, UpdateSourceEventName=PropertyChanged}" Grid.Column="1" Grid.Row="1"/>
-                <Label Text="WordRus:" Grid.Row="2"/>
+                <Label Text="Russian:" Grid.Row="2"/>
                 <Label x:Name="labelWordRus" Text="{Binding WordRus, Mode=OneWay, UpdateSourceEventName=PropertyChanged}" Grid.Column="1" Grid.Row="2"/>
                 
             </Grid>

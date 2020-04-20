@@ -55,7 +55,7 @@ namespace Test1
             this.BindingContext = temp;
         }
 
-        private async void toolSave_Clicked(object sender, EventArgs e)
+        private async void Save_Clicked(object sender, EventArgs e)
         {
             // ---------!!!!!!!!!!--------------
 
@@ -77,21 +77,21 @@ namespace Test1
                 // any listeners of the event (collection bound controls (listview, ...))
                 // will be notified and act accordingly (display the new item)
                 Words.Add(original);
-                await DisplayAlert("New ID: ", original.Id.ToString(), "OK");
+                //await DisplayAlert("New ID: ", original.Id.ToString(), "OK");
             }
             // already existing item
             else
             {
                 // update in repository
                 await App.Repo.UpdateItemAsync(original);
-                await DisplayAlert("Updated ID: ", original.Id.ToString(), "OK");
+                //await DisplayAlert("Updated ID: ", original.Id.ToString(), "OK");
             }
 
             // Will navigate back to previous page.
             // temp object will be lost (garbage collected)
             await Navigation.PopAsync();
         }
-        private void toolPhoto_Clicked(object sender, EventArgs e)
+        private void Photo_Clicked(object sender, EventArgs e)
         {
             //-------------------------------
 

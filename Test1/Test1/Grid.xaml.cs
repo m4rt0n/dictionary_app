@@ -35,23 +35,7 @@ namespace Test1
             {
                 await Navigation.PushAsync(new WordDetailPage(item, Words));
 
-            }
-
-
-            /*
-            private void OnPictureSelected(object sender, ItemTappedEventArgs e)
-            {
-                //SelectionChangedEventArgs
-
-                Word tappedPic = e.Item as Word;
-                if (tappedPic != null)
-                {
-                     Navigation.PushAsync(new WordDetailPage(tappedPic, Words));
-
-                }
-            }
-            */
-
+            }        
         }
     }
 }

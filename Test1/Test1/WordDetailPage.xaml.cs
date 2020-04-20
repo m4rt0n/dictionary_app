@@ -44,13 +44,13 @@ namespace Test1
             this.Words = words;
         }
 
-        private void toolEdit_Clicked(object sender, EventArgs e)
+        private void Edit_Clicked(object sender, EventArgs e)
         {
             // pass on the references
             Navigation.PushAsync(new WordEditPage(Context, Words));
         }
 
-        private async void toolDel_Clicked(object sender, EventArgs e)
+        private async void Delete_Clicked(object sender, EventArgs e)
         {
             // propt user
             var result = await DisplayAlert("Delete", "Sure?", "Yes", "No");

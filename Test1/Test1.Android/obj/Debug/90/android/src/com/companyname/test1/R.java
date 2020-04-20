@@ -506,12 +506,14 @@ public final class R {
      */
     public static final int backgroundStacked=0x7f030033;
     /**
+     * Tint to apply to the background.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int backgroundTint=0x7f030034;
     /**
+     * Blending mode used to apply the background tint.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -1036,6 +1038,7 @@ public final class R {
      */
     public static final int chipStyle=0x7f030076;
     /**
+     * Close button icon
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1139,12 +1142,15 @@ public final class R {
      */
     public static final int color=0x7f030083;
     /**
+     * Bright complement to the primary branding color. By default, this is the color applied
+     * to framework controls (via colorControlActivated).
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int colorAccent=0x7f030084;
     /**
+     * Default color of background imagery for floating components, ex. dialogs, popups, and cards.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
@@ -1191,12 +1197,16 @@ public final class R {
      */
     public static final int colorError=0x7f03008a;
     /**
+     * The primary branding color for the app. By default, this is the color applied to the
+     * action bar background.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int colorPrimary=0x7f03008b;
     /**
+     * Dark variant of the primary branding color. By default, this is the color applied to
+     * the status bar (via statusBarColor) and navigation bar (via navigationBarColor).
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
@@ -1531,6 +1541,7 @@ public final class R {
      */
     public static final int editTextColor=0x7f0300b3;
     /**
+     * Default EditText style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1538,6 +1549,7 @@ public final class R {
      */
     public static final int editTextStyle=0x7f0300b4;
     /**
+     * Elevation for the action bar itself
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -2011,6 +2023,7 @@ public final class R {
      */
     public static final int hoveredFocusedTranslationZ=0x7f0300eb;
     /**
+     * Specifies the drawable used for the application icon.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2062,12 +2075,14 @@ public final class R {
      */
     public static final int iconStartPadding=0x7f0300f1;
     /**
+     * Tint to apply to the icon.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int iconTint=0x7f0300f2;
     /**
+     * Blending mode used to apply the icon tint.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -5458,12 +5473,12 @@ public final class R {
      * <tr><td><code>{@link #ActionBar_customNavigationLayout com.companyname.test1:customNavigationLayout}</code></td><td>Specifies a layout for custom navigation.</td></tr>
      * <tr><td><code>{@link #ActionBar_displayOptions com.companyname.test1:displayOptions}</code></td><td>Options affecting how the action bar is displayed.</td></tr>
      * <tr><td><code>{@link #ActionBar_divider com.companyname.test1:divider}</code></td><td>Specifies the drawable used for item dividers.</td></tr>
-     * <tr><td><code>{@link #ActionBar_elevation com.companyname.test1:elevation}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_elevation com.companyname.test1:elevation}</code></td><td>Elevation for the action bar itself</td></tr>
      * <tr><td><code>{@link #ActionBar_height com.companyname.test1:height}</code></td><td></td></tr>
      * <tr><td><code>{@link #ActionBar_hideOnContentScroll com.companyname.test1:hideOnContentScroll}</code></td><td>Set true to hide the action bar on a vertical nested scroll of content.</td></tr>
      * <tr><td><code>{@link #ActionBar_homeAsUpIndicator com.companyname.test1:homeAsUpIndicator}</code></td><td>Specifies a drawable to use for the 'home as up' indicator.</td></tr>
      * <tr><td><code>{@link #ActionBar_homeLayout com.companyname.test1:homeLayout}</code></td><td>Specifies a layout to use for the "home" section of the action bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_icon com.companyname.test1:icon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_icon com.companyname.test1:icon}</code></td><td>Specifies the drawable used for the application icon.</td></tr>
      * <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.companyname.test1:indeterminateProgressStyle}</code></td><td>Specifies a style resource to use for an indeterminate progress spinner.</td></tr>
      * <tr><td><code>{@link #ActionBar_itemPadding com.companyname.test1:itemPadding}</code></td><td>Specifies padding that should be applied to the left and right sides of
      * system-provided items in the bar.</td></tr>
@@ -6499,7 +6514,7 @@ public final class R {
      * <tr><td><code>{@link #AppBarLayout_android_background android:background}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppBarLayout_android_touchscreenBlocksFocus android:touchscreenBlocksFocus}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppBarLayout_android_keyboardNavigationCluster android:keyboardNavigationCluster}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppBarLayout_elevation com.companyname.test1:elevation}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppBarLayout_elevation com.companyname.test1:elevation}</code></td><td>Elevation for the action bar itself</td></tr>
      * <tr><td><code>{@link #AppBarLayout_expanded com.companyname.test1:expanded}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppBarLayout_liftOnScroll com.companyname.test1:liftOnScroll}</code></td><td></td></tr>
      * </table>
@@ -6550,8 +6565,9 @@ public final class R {
      */
     public static final int AppBarLayout_android_keyboardNavigationCluster=2;
     /**
-     * <p>This symbol is the offset where the {@link com.companyname.test1.R.attr#elevation}
-     * attribute's value can be found in the {@link #AppBarLayout} array.
+     * <p>
+     * @attr description
+     * Elevation for the action bar itself
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -7252,16 +7268,16 @@ public final class R {
      * <tr><td><code>{@link #AppCompatTheme_buttonStyleSmall com.companyname.test1:buttonStyleSmall}</code></td><td>Small Button style.</td></tr>
      * <tr><td><code>{@link #AppCompatTheme_checkboxStyle com.companyname.test1:checkboxStyle}</code></td><td>Default Checkbox style.</td></tr>
      * <tr><td><code>{@link #AppCompatTheme_checkedTextViewStyle com.companyname.test1:checkedTextViewStyle}</code></td><td>Default CheckedTextView style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorAccent com.companyname.test1:colorAccent}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorBackgroundFloating com.companyname.test1:colorBackgroundFloating}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorAccent com.companyname.test1:colorAccent}</code></td><td>Bright complement to the primary branding color.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorBackgroundFloating com.companyname.test1:colorBackgroundFloating}</code></td><td>Default color of background imagery for floating components, ex.</td></tr>
      * <tr><td><code>{@link #AppCompatTheme_colorButtonNormal com.companyname.test1:colorButtonNormal}</code></td><td>The color applied to framework buttons in their normal state.</td></tr>
      * <tr><td><code>{@link #AppCompatTheme_colorControlActivated com.companyname.test1:colorControlActivated}</code></td><td>The color applied to framework controls in their activated (ex.</td></tr>
      * <tr><td><code>{@link #AppCompatTheme_colorControlHighlight com.companyname.test1:colorControlHighlight}</code></td><td>The color applied to framework control highlights (ex.</td></tr>
      * <tr><td><code>{@link #AppCompatTheme_colorControlNormal com.companyname.test1:colorControlNormal}</code></td><td>The color applied to framework controls in their normal state.</td></tr>
      * <tr><td><code>{@link #AppCompatTheme_colorError com.companyname.test1:colorError}</code></td><td>Color used for error states and things that need to be drawn to
      * the user's attention.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorPrimary com.companyname.test1:colorPrimary}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorPrimaryDark com.companyname.test1:colorPrimaryDark}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorPrimary com.companyname.test1:colorPrimary}</code></td><td>The primary branding color for the app.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorPrimaryDark com.companyname.test1:colorPrimaryDark}</code></td><td>Dark variant of the primary branding color.</td></tr>
      * <tr><td><code>{@link #AppCompatTheme_colorSwitchThumbNormal com.companyname.test1:colorSwitchThumbNormal}</code></td><td>The color applied to framework switch thumbs in their normal state.</td></tr>
      * <tr><td><code>{@link #AppCompatTheme_controlBackground com.companyname.test1:controlBackground}</code></td><td>The background used by framework controls.</td></tr>
      * <tr><td><code>{@link #AppCompatTheme_dialogCornerRadius com.companyname.test1:dialogCornerRadius}</code></td><td>Preferred corner radius of dialogs.</td></tr>
@@ -7273,7 +7289,7 @@ public final class R {
      * <tr><td><code>{@link #AppCompatTheme_dropdownListPreferredItemHeight com.companyname.test1:dropdownListPreferredItemHeight}</code></td><td>The preferred item height for dropdown lists.</td></tr>
      * <tr><td><code>{@link #AppCompatTheme_editTextBackground com.companyname.test1:editTextBackground}</code></td><td>EditText background drawable.</td></tr>
      * <tr><td><code>{@link #AppCompatTheme_editTextColor com.companyname.test1:editTextColor}</code></td><td>EditText text foreground color.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_editTextStyle com.companyname.test1:editTextStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_editTextStyle com.companyname.test1:editTextStyle}</code></td><td>Default EditText style.</td></tr>
      * <tr><td><code>{@link #AppCompatTheme_homeAsUpIndicator com.companyname.test1:homeAsUpIndicator}</code></td><td>Specifies a drawable to use for the 'home as up' indicator.</td></tr>
      * <tr><td><code>{@link #AppCompatTheme_imageButtonStyle com.companyname.test1:imageButtonStyle}</code></td><td>ImageButton background drawable.</td></tr>
      * <tr><td><code>{@link #AppCompatTheme_listChoiceBackgroundIndicator com.companyname.test1:listChoiceBackgroundIndicator}</code></td><td>Drawable used as a background for selected list items.</td></tr>
@@ -9141,7 +9157,7 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #BottomAppBar_backgroundTint com.companyname.test1:backgroundTint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #BottomAppBar_backgroundTint com.companyname.test1:backgroundTint}</code></td><td>Tint to apply to the background.</td></tr>
      * <tr><td><code>{@link #BottomAppBar_fabAlignmentMode com.companyname.test1:fabAlignmentMode}</code></td><td></td></tr>
      * <tr><td><code>{@link #BottomAppBar_fabCradleMargin com.companyname.test1:fabCradleMargin}</code></td><td></td></tr>
      * <tr><td><code>{@link #BottomAppBar_fabCradleRoundedCornerRadius com.companyname.test1:fabCradleRoundedCornerRadius}</code></td><td></td></tr>
@@ -9160,8 +9176,9 @@ public final class R {
       0x7f0300c6, 0x7f0300e5
     };
     /**
-     * <p>This symbol is the offset where the {@link com.companyname.test1.R.attr#backgroundTint}
-     * attribute's value can be found in the {@link #BottomAppBar} array.
+     * <p>
+     * @attr description
+     * Tint to apply to the background.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -9243,7 +9260,7 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #BottomNavigationView_elevation com.companyname.test1:elevation}</code></td><td></td></tr>
+     * <tr><td><code>{@link #BottomNavigationView_elevation com.companyname.test1:elevation}</code></td><td>Elevation for the action bar itself</td></tr>
      * <tr><td><code>{@link #BottomNavigationView_itemBackground com.companyname.test1:itemBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #BottomNavigationView_itemHorizontalTranslationEnabled com.companyname.test1:itemHorizontalTranslationEnabled}</code></td><td></td></tr>
      * <tr><td><code>{@link #BottomNavigationView_itemIconSize com.companyname.test1:itemIconSize}</code></td><td></td></tr>
@@ -9271,8 +9288,9 @@ public final class R {
       0x7f030107, 0x7f03012b
     };
     /**
-     * <p>This symbol is the offset where the {@link com.companyname.test1.R.attr#elevation}
-     * attribute's value can be found in the {@link #BottomNavigationView} array.
+     * <p>
+     * @attr description
+     * Elevation for the action bar itself
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -9735,7 +9753,7 @@ public final class R {
      * <tr><td><code>{@link #Chip_chipStartPadding com.companyname.test1:chipStartPadding}</code></td><td></td></tr>
      * <tr><td><code>{@link #Chip_chipStrokeColor com.companyname.test1:chipStrokeColor}</code></td><td></td></tr>
      * <tr><td><code>{@link #Chip_chipStrokeWidth com.companyname.test1:chipStrokeWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Chip_closeIcon com.companyname.test1:closeIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Chip_closeIcon com.companyname.test1:closeIcon}</code></td><td>Close button icon</td></tr>
      * <tr><td><code>{@link #Chip_closeIconEnabled com.companyname.test1:closeIconEnabled}</code></td><td></td></tr>
      * <tr><td><code>{@link #Chip_closeIconEndPadding com.companyname.test1:closeIconEndPadding}</code></td><td></td></tr>
      * <tr><td><code>{@link #Chip_closeIconSize com.companyname.test1:closeIconSize}</code></td><td></td></tr>
@@ -10037,8 +10055,9 @@ public final class R {
      */
     public static final int Chip_chipStrokeWidth=19;
     /**
-     * <p>This symbol is the offset where the {@link com.companyname.test1.R.attr#closeIcon}
-     * attribute's value can be found in the {@link #Chip} array.
+     * <p>
+     * @attr description
+     * Close button icon
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11138,10 +11157,10 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #FloatingActionButton_backgroundTint com.companyname.test1:backgroundTint}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FloatingActionButton_backgroundTintMode com.companyname.test1:backgroundTintMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FloatingActionButton_backgroundTint com.companyname.test1:backgroundTint}</code></td><td>Tint to apply to the background.</td></tr>
+     * <tr><td><code>{@link #FloatingActionButton_backgroundTintMode com.companyname.test1:backgroundTintMode}</code></td><td>Blending mode used to apply the background tint.</td></tr>
      * <tr><td><code>{@link #FloatingActionButton_borderWidth com.companyname.test1:borderWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FloatingActionButton_elevation com.companyname.test1:elevation}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FloatingActionButton_elevation com.companyname.test1:elevation}</code></td><td>Elevation for the action bar itself</td></tr>
      * <tr><td><code>{@link #FloatingActionButton_fabCustomSize com.companyname.test1:fabCustomSize}</code></td><td></td></tr>
      * <tr><td><code>{@link #FloatingActionButton_fabSize com.companyname.test1:fabSize}</code></td><td></td></tr>
      * <tr><td><code>{@link #FloatingActionButton_hideMotionSpec com.companyname.test1:hideMotionSpec}</code></td><td></td></tr>
@@ -11173,8 +11192,9 @@ public final class R {
       0x7f0301d0
     };
     /**
-     * <p>This symbol is the offset where the {@link com.companyname.test1.R.attr#backgroundTint}
-     * attribute's value can be found in the {@link #FloatingActionButton} array.
+     * <p>
+     * @attr description
+     * Tint to apply to the background.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -11184,8 +11204,9 @@ public final class R {
      */
     public static final int FloatingActionButton_backgroundTint=0;
     /**
-     * <p>This symbol is the offset where the {@link com.companyname.test1.R.attr#backgroundTintMode}
-     * attribute's value can be found in the {@link #FloatingActionButton} array.
+     * <p>
+     * @attr description
+     * Blending mode used to apply the background tint.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -11223,8 +11244,9 @@ public final class R {
      */
     public static final int FloatingActionButton_borderWidth=2;
     /**
-     * <p>This symbol is the offset where the {@link com.companyname.test1.R.attr#elevation}
-     * attribute's value can be found in the {@link #FloatingActionButton} array.
+     * <p>
+     * @attr description
+     * Elevation for the action bar itself
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12362,15 +12384,15 @@ public final class R {
      * <tr><td><code>{@link #MaterialButton_android_insetRight android:insetRight}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_android_insetTop android:insetTop}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_android_insetBottom android:insetBottom}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialButton_backgroundTint com.companyname.test1:backgroundTint}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialButton_backgroundTintMode com.companyname.test1:backgroundTintMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MaterialButton_backgroundTint com.companyname.test1:backgroundTint}</code></td><td>Tint to apply to the background.</td></tr>
+     * <tr><td><code>{@link #MaterialButton_backgroundTintMode com.companyname.test1:backgroundTintMode}</code></td><td>Blending mode used to apply the background tint.</td></tr>
      * <tr><td><code>{@link #MaterialButton_cornerRadius com.companyname.test1:cornerRadius}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialButton_icon com.companyname.test1:icon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MaterialButton_icon com.companyname.test1:icon}</code></td><td>Specifies the drawable used for the application icon.</td></tr>
      * <tr><td><code>{@link #MaterialButton_iconGravity com.companyname.test1:iconGravity}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_iconPadding com.companyname.test1:iconPadding}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_iconSize com.companyname.test1:iconSize}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialButton_iconTint com.companyname.test1:iconTint}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialButton_iconTintMode com.companyname.test1:iconTintMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MaterialButton_iconTint com.companyname.test1:iconTint}</code></td><td>Tint to apply to the icon.</td></tr>
+     * <tr><td><code>{@link #MaterialButton_iconTintMode com.companyname.test1:iconTintMode}</code></td><td>Blending mode used to apply the icon tint.</td></tr>
      * <tr><td><code>{@link #MaterialButton_rippleColor com.companyname.test1:rippleColor}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_strokeColor com.companyname.test1:strokeColor}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_strokeWidth com.companyname.test1:strokeWidth}</code></td><td></td></tr>
@@ -12467,8 +12489,9 @@ public final class R {
      */
     public static final int MaterialButton_android_insetBottom=3;
     /**
-     * <p>This symbol is the offset where the {@link com.companyname.test1.R.attr#backgroundTint}
-     * attribute's value can be found in the {@link #MaterialButton} array.
+     * <p>
+     * @attr description
+     * Tint to apply to the background.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -12478,8 +12501,9 @@ public final class R {
      */
     public static final int MaterialButton_backgroundTint=4;
     /**
-     * <p>This symbol is the offset where the {@link com.companyname.test1.R.attr#backgroundTintMode}
-     * attribute's value can be found in the {@link #MaterialButton} array.
+     * <p>
+     * @attr description
+     * Blending mode used to apply the background tint.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -12517,8 +12541,9 @@ public final class R {
      */
     public static final int MaterialButton_cornerRadius=6;
     /**
-     * <p>This symbol is the offset where the {@link com.companyname.test1.R.attr#icon}
-     * attribute's value can be found in the {@link #MaterialButton} array.
+     * <p>
+     * @attr description
+     * Specifies the drawable used for the application icon.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12572,8 +12597,9 @@ public final class R {
      */
     public static final int MaterialButton_iconSize=10;
     /**
-     * <p>This symbol is the offset where the {@link com.companyname.test1.R.attr#iconTint}
-     * attribute's value can be found in the {@link #MaterialButton} array.
+     * <p>
+     * @attr description
+     * Tint to apply to the icon.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -12583,8 +12609,9 @@ public final class R {
      */
     public static final int MaterialButton_iconTint=11;
     /**
-     * <p>This symbol is the offset where the {@link com.companyname.test1.R.attr#iconTintMode}
-     * attribute's value can be found in the {@link #MaterialButton} array.
+     * <p>
+     * @attr description
+     * Blending mode used to apply the icon tint.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -12695,12 +12722,12 @@ public final class R {
      * <tr><td><code>{@link #MaterialComponentsTheme_chipGroupStyle com.companyname.test1:chipGroupStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialComponentsTheme_chipStandaloneStyle com.companyname.test1:chipStandaloneStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialComponentsTheme_chipStyle com.companyname.test1:chipStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialComponentsTheme_colorAccent com.companyname.test1:colorAccent}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialComponentsTheme_colorBackgroundFloating com.companyname.test1:colorBackgroundFloating}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialComponentsTheme_colorPrimary com.companyname.test1:colorPrimary}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialComponentsTheme_colorPrimaryDark com.companyname.test1:colorPrimaryDark}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MaterialComponentsTheme_colorAccent com.companyname.test1:colorAccent}</code></td><td>Bright complement to the primary branding color.</td></tr>
+     * <tr><td><code>{@link #MaterialComponentsTheme_colorBackgroundFloating com.companyname.test1:colorBackgroundFloating}</code></td><td>Default color of background imagery for floating components, ex.</td></tr>
+     * <tr><td><code>{@link #MaterialComponentsTheme_colorPrimary com.companyname.test1:colorPrimary}</code></td><td>The primary branding color for the app.</td></tr>
+     * <tr><td><code>{@link #MaterialComponentsTheme_colorPrimaryDark com.companyname.test1:colorPrimaryDark}</code></td><td>Dark variant of the primary branding color.</td></tr>
      * <tr><td><code>{@link #MaterialComponentsTheme_colorSecondary com.companyname.test1:colorSecondary}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialComponentsTheme_editTextStyle com.companyname.test1:editTextStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MaterialComponentsTheme_editTextStyle com.companyname.test1:editTextStyle}</code></td><td>Default EditText style.</td></tr>
      * <tr><td><code>{@link #MaterialComponentsTheme_floatingActionButtonStyle com.companyname.test1:floatingActionButtonStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialComponentsTheme_materialButtonStyle com.companyname.test1:materialButtonStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialComponentsTheme_materialCardViewStyle com.companyname.test1:materialCardViewStyle}</code></td><td></td></tr>
@@ -12827,8 +12854,10 @@ public final class R {
      */
     public static final int MaterialComponentsTheme_chipStyle=4;
     /**
-     * <p>This symbol is the offset where the {@link com.companyname.test1.R.attr#colorAccent}
-     * attribute's value can be found in the {@link #MaterialComponentsTheme} array.
+     * <p>
+     * @attr description
+     * Bright complement to the primary branding color. By default, this is the color applied
+     * to framework controls (via colorControlActivated).
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -12838,8 +12867,9 @@ public final class R {
      */
     public static final int MaterialComponentsTheme_colorAccent=5;
     /**
-     * <p>This symbol is the offset where the {@link com.companyname.test1.R.attr#colorBackgroundFloating}
-     * attribute's value can be found in the {@link #MaterialComponentsTheme} array.
+     * <p>
+     * @attr description
+     * Default color of background imagery for floating components, ex. dialogs, popups, and cards.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -12849,8 +12879,10 @@ public final class R {
      */
     public static final int MaterialComponentsTheme_colorBackgroundFloating=6;
     /**
-     * <p>This symbol is the offset where the {@link com.companyname.test1.R.attr#colorPrimary}
-     * attribute's value can be found in the {@link #MaterialComponentsTheme} array.
+     * <p>
+     * @attr description
+     * The primary branding color for the app. By default, this is the color applied to the
+     * action bar background.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -12860,8 +12892,10 @@ public final class R {
      */
     public static final int MaterialComponentsTheme_colorPrimary=7;
     /**
-     * <p>This symbol is the offset where the {@link com.companyname.test1.R.attr#colorPrimaryDark}
-     * attribute's value can be found in the {@link #MaterialComponentsTheme} array.
+     * <p>
+     * @attr description
+     * Dark variant of the primary branding color. By default, this is the color applied to
+     * the status bar (via statusBarColor) and navigation bar (via navigationBarColor).
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -12882,8 +12916,9 @@ public final class R {
      */
     public static final int MaterialComponentsTheme_colorSecondary=9;
     /**
-     * <p>This symbol is the offset where the {@link com.companyname.test1.R.attr#editTextStyle}
-     * attribute's value can be found in the {@link #MaterialComponentsTheme} array.
+     * <p>
+     * @attr description
+     * Default EditText style.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -13304,8 +13339,8 @@ public final class R {
      * action view.</td></tr>
      * <tr><td><code>{@link #MenuItem_alphabeticModifiers com.companyname.test1:alphabeticModifiers}</code></td><td>The alphabetic modifier key.</td></tr>
      * <tr><td><code>{@link #MenuItem_contentDescription com.companyname.test1:contentDescription}</code></td><td>The content description associated with the item.</td></tr>
-     * <tr><td><code>{@link #MenuItem_iconTint com.companyname.test1:iconTint}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MenuItem_iconTintMode com.companyname.test1:iconTintMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_iconTint com.companyname.test1:iconTint}</code></td><td>Tint to apply to the icon.</td></tr>
+     * <tr><td><code>{@link #MenuItem_iconTintMode com.companyname.test1:iconTintMode}</code></td><td>Blending mode used to apply the icon tint.</td></tr>
      * <tr><td><code>{@link #MenuItem_numericModifiers com.companyname.test1:numericModifiers}</code></td><td>The numeric modifier key.</td></tr>
      * <tr><td><code>{@link #MenuItem_showAsAction com.companyname.test1:showAsAction}</code></td><td>How this item should display in the Action Bar, if present.</td></tr>
      * <tr><td><code>{@link #MenuItem_tooltipText com.companyname.test1:tooltipText}</code></td><td>The tooltip text associated with the item.</td></tr>
@@ -13844,7 +13879,7 @@ public final class R {
      * <tr><td><code>{@link #NavigationView_android_background android:background}</code></td><td></td></tr>
      * <tr><td><code>{@link #NavigationView_android_fitsSystemWindows android:fitsSystemWindows}</code></td><td></td></tr>
      * <tr><td><code>{@link #NavigationView_android_maxWidth android:maxWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #NavigationView_elevation com.companyname.test1:elevation}</code></td><td></td></tr>
+     * <tr><td><code>{@link #NavigationView_elevation com.companyname.test1:elevation}</code></td><td>Elevation for the action bar itself</td></tr>
      * <tr><td><code>{@link #NavigationView_headerLayout com.companyname.test1:headerLayout}</code></td><td></td></tr>
      * <tr><td><code>{@link #NavigationView_itemBackground com.companyname.test1:itemBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #NavigationView_itemHorizontalPadding com.companyname.test1:itemHorizontalPadding}</code></td><td></td></tr>
@@ -13911,8 +13946,9 @@ public final class R {
      */
     public static final int NavigationView_android_maxWidth=2;
     /**
-     * <p>This symbol is the offset where the {@link com.companyname.test1.R.attr#elevation}
-     * attribute's value can be found in the {@link #NavigationView} array.
+     * <p>
+     * @attr description
+     * Elevation for the action bar itself
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -14388,7 +14424,7 @@ public final class R {
      * <tr><td><code>{@link #SearchView_android_maxWidth android:maxWidth}</code></td><td></td></tr>
      * <tr><td><code>{@link #SearchView_android_inputType android:inputType}</code></td><td></td></tr>
      * <tr><td><code>{@link #SearchView_android_imeOptions android:imeOptions}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_closeIcon com.companyname.test1:closeIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_closeIcon com.companyname.test1:closeIcon}</code></td><td>Close button icon</td></tr>
      * <tr><td><code>{@link #SearchView_commitIcon com.companyname.test1:commitIcon}</code></td><td>Commit icon shown in the query suggestion row</td></tr>
      * <tr><td><code>{@link #SearchView_defaultQueryHint com.companyname.test1:defaultQueryHint}</code></td><td>Default query hint used when {@code queryHint} is undefined and
      * the search view's {@code SearchableInfo} does not provide a hint.</td></tr>
@@ -14754,7 +14790,7 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #SnackbarLayout_android_maxWidth android:maxWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SnackbarLayout_elevation com.companyname.test1:elevation}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SnackbarLayout_elevation com.companyname.test1:elevation}</code></td><td>Elevation for the action bar itself</td></tr>
      * <tr><td><code>{@link #SnackbarLayout_maxActionInlineWidth com.companyname.test1:maxActionInlineWidth}</code></td><td></td></tr>
      * </table>
      * @see #SnackbarLayout_android_maxWidth
@@ -14778,8 +14814,9 @@ public final class R {
      */
     public static final int SnackbarLayout_android_maxWidth=0;
     /**
-     * <p>This symbol is the offset where the {@link com.companyname.test1.R.attr#elevation}
-     * attribute's value can be found in the {@link #SnackbarLayout} array.
+     * <p>
+     * @attr description
+     * Elevation for the action bar itself
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -17000,8 +17037,8 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #ViewBackgroundHelper_android_background android:background}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ViewBackgroundHelper_backgroundTint com.companyname.test1:backgroundTint}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ViewBackgroundHelper_backgroundTintMode com.companyname.test1:backgroundTintMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ViewBackgroundHelper_backgroundTint com.companyname.test1:backgroundTint}</code></td><td>Tint to apply to the background.</td></tr>
+     * <tr><td><code>{@link #ViewBackgroundHelper_backgroundTintMode com.companyname.test1:backgroundTintMode}</code></td><td>Blending mode used to apply the background tint.</td></tr>
      * </table>
      * @see #ViewBackgroundHelper_android_background
      * @see #ViewBackgroundHelper_backgroundTint

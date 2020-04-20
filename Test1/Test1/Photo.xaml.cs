@@ -36,7 +36,7 @@ namespace Test1
         public ObservableCollection<Word> Words { get; set; }
 
         const string _picsDir = @"\storage\emulated\0\android\data\com.companyname.camtest\files\Pictures\";
-        string _photoPath = Path.Combine(_picsDir + "SomeJpegNameAssociatedWithTheItemWhichWasPulledFromDatabase.jpg");
+        string _photoPath = Path.Combine(_picsDir + "photo.jpg");
 
         public string PhotoPath
         {
@@ -74,7 +74,7 @@ namespace Test1
         }
 
         // ----------------------------------
-        private async void PhotoButton_Clicked(object sender, EventArgs e)
+        private async void TakePhoto_Clicked(object sender, EventArgs e)
         {
             if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
             {
@@ -102,12 +102,14 @@ namespace Test1
 
             //------------------------------------------------------------------------------------------------------------------------------------------------
 
+            // JPEGCOUNT!!!!!!!!!!!!!!!!! //
+
             // using app storage to store image
             var jpgCount = Directory.GetFiles(Path.GetDirectoryName(photo.Path)).Where(path => path.Contains(".jpg")).Count();
             var msg = $"{nameof(photo.Path)} = {photo.Path}\n" +
                 $"Jpegs in app dir = {jpgCount}\n";
 
-            //await DisplayAlert("blabla?", msg, "blabla.");
+            await DisplayAlert("Photo saved: ", msg, "OK");
 
             PhotoPath = photo.Path;
 
@@ -131,14 +133,14 @@ namespace Test1
                 // any listeners of the event (collection bound controls (listview, ...))
                 // will be notified and act accordingly (display the new item)
                 Words.Add(original);
-                await DisplayAlert("New ID: ", original.Id.ToString(), "OK");
+                //await DisplayAlert("New ID: ", original.Id.ToString(), "OK");
             }
             // already existing item
             else
             {
                 // update in repository
                 await App.Repo.UpdateItemAsync(original);
-                await DisplayAlert("Updated ID: ", original.Id.ToString(), "OK");
+                //await DisplayAlert("Updated ID: ", original.Id.ToString(), "OK");
             }
 
             // Will navigate back to previous page.

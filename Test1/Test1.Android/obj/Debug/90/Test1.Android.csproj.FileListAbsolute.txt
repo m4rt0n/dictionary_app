@@ -11,8 +11,6 @@ C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\adb.props
 C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\Test1.Android.csprojAssemblyReference.cache
 C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\_VerifyXamarinAndroidSupportVersions.stamp
 C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\stamp\_BuildLibraryImportsCache.stamp
-C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\resourcepaths.cache
-C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\resourcecache.stamp
 C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\res.flag
 C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\flata\1F3A7D2C76491CBF.stamp
 C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\flata\5B7E12E563490187.stamp
@@ -493,3 +491,6 @@ C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\stamp\_Gener
 C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\stamp\SetupDependenciesForDesigner.stamp
+C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\bin\Debug\com.companyname.test1.aab
+C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\Test1.Android.csproj.CoreCompileInputs.cache
+C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\android\AndroidManifest.xml
