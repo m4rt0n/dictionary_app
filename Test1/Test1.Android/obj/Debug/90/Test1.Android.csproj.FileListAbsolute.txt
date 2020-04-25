@@ -481,7 +481,6 @@ C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\app_shared_l
 C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\app_shared_libraries\x86\libxamarin-app.so
 C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\app_shared_libraries\x86_64\libxamarin-app.so
 C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\android\bin\classes.dex
-C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\stamp\_BuildAdditionalResourcesCache.stamp
 C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\stamp\_CleanIntermediateIfNuGetsChange.stamp
 C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\stamp\_CompileToDalvik.stamp
 C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\stamp\_ConvertCustomView.stamp
@@ -490,7 +489,6 @@ C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\stamp\_Conve
 C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\stamp\SetupDependenciesForDesigner.stamp
 C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\bin\Debug\com.companyname.test1.aab
 C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\Test1.Android.csproj.CoreCompileInputs.cache
 C:\Users\Marton\source\repos\Test1\Test1\Test1.Android\obj\Debug\90\android\AndroidManifest.xml
