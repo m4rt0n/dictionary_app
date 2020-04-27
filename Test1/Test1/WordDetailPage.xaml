@@ -5,13 +5,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Test1.WordDetailPage">
-
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="DELETE" x:Name="Delete" Clicked="Delete_Clicked" IsEnabled="{Binding CanDelete}"/>
         <ToolbarItem Text="EDIT" x:Name="Edit" Clicked="Edit_Clicked"/>
-        
     </ContentPage.ToolbarItems>
-
     <ContentPage.Content>
         <StackLayout>
             <Grid Margin="10">
@@ -27,16 +24,13 @@
                 <Label x:Name="labelWordEng" Text="{Binding WordEng, Mode=OneWay, UpdateSourceEventName=PropertyChanged}" Grid.Column="1" Grid.Row="1"/>
                 <Label Text="Russian:" Grid.Row="2"/>
                 <Label x:Name="labelWordRus" Text="{Binding WordRus, Mode=OneWay, UpdateSourceEventName=PropertyChanged}" Grid.Column="1" Grid.Row="2"/>
-                
             </Grid>
-
             <Frame Padding="10, 10, 10, 10" OutlineColor="Black" 
                    Margin="100, 0 ">
                 <Image x:Name="imgPhoto"
                    HeightRequest="250" WidthRequest="250"
                   Source= "{Binding WordPicturePath, Mode=OneWay, UpdateSourceEventName=PropertyChanged}"/>
             </Frame>
-            
             <Frame Padding="10, 10, 10, 10" OutlineColor="Black" 
                    Margin="100, 30"
                    BackgroundColor="Transparent" 
@@ -47,5 +41,4 @@
             </Frame>
         </StackLayout>
     </ContentPage.Content>
-
 </ContentPage>

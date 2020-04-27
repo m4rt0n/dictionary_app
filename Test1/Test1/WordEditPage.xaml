@@ -5,12 +5,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Test1.WordEditPage">
-
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="SAVE" x:Name="Save" Clicked="Save_Clicked"/>
         <ToolbarItem Text="PHOTO" x:Name="Photo" Clicked="Photo_Clicked"/>
     </ContentPage.ToolbarItems>
-
     <ContentPage.Content>
         <StackLayout>
             <Grid Margin="10">
@@ -22,12 +20,10 @@
                     <RowDefinition Height="AUTO"/>
                     <RowDefinition Height="AUTO"/>
                 </Grid.RowDefinitions>
-               <Label Text="English:" Grid.Row="1"/>
+                <Label Text="English:" Grid.Row="1"/>
                 <Entry x:Name="entryPropWordEng" Text="{Binding Path=WordEng, UpdateSourceEventName=PropertyChanged}" Grid.Column="1" Grid.Row="1"/>
                 <Label Text="Russian:" Grid.Row="2"/>
                 <Entry x:Name="entryPropWordRus" Text="{Binding Path=WordRus, UpdateSourceEventName=PropertyChanged}" Grid.Column="1" Grid.Row="2"/>
-                
-
             </Grid>
             <Frame Padding="10, 10, 10, 10" OutlineColor="Black" 
                    Margin="100, 0 ">
@@ -35,7 +31,6 @@
                    HeightRequest="250" WidthRequest="250"
                   Source= "{Binding WordPicturePath, Mode=OneWay, UpdateSourceEventName=PropertyChanged}"/>
             </Frame>
-
             <Frame Padding="10, 10, 10, 10" OutlineColor="Black" 
                    Margin="100, 30"
                    BackgroundColor="Transparent" 
@@ -46,5 +41,4 @@
             </Frame>
         </StackLayout>
     </ContentPage.Content>
-
 </ContentPage>

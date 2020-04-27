@@ -15,26 +15,21 @@ namespace Test1
     {
         public ObservableCollection<Word> Words { get; private set; }
 
-        public Grid()
+        public Grid(ObservableCollection<Word> words)
         {
             InitializeComponent();
+            Words = words;
+            BindingContext = this;
+            collectionView.ItemsSource = Words;
         }
-        protected override async void OnAppearing()
-        {
-            base.OnAppearing();
-
-            collectionView.ItemsSource = await App.Repo.GetAllItemsAsync();
-        }
+        
 
         async void OnPictureSelected(object sender, SelectedItemChangedEventArgs e)
         {
-
-
             var item = collectionView.SelectedItem as Word;
             if (item != null)
             {
                 await Navigation.PushAsync(new WordDetailPage(item, Words));
-
             }        
         }
     }

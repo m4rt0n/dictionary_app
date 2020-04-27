@@ -7,7 +7,7 @@ namespace Test1
     public class Word : INotifyPropertyChanged
     {
 
-        private int id { get; set; }
+        private int id;
         private string wordEng;
         private string wordRus;
         private string wordNote;
@@ -22,8 +22,7 @@ namespace Test1
             }
             set
             {
-                id = value;
-                // notify listeners of event (bound controls (labels, ..))
+                id = value;               
                 OnPropertyChanged("Id");
             }
         }

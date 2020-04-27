@@ -2,7 +2,6 @@ C:\Users\Marton\source\repos\Test1\Test1\Test1\bin\Debug\netstandard2.0\Test1.de
 C:\Users\Marton\source\repos\Test1\Test1\Test1\bin\Debug\netstandard2.0\Test1.dll
 C:\Users\Marton\source\repos\Test1\Test1\Test1\bin\Debug\netstandard2.0\ref\Test1.dll
 C:\Users\Marton\source\repos\Test1\Test1\Test1\bin\Debug\netstandard2.0\Test1.pdb
-C:\Users\Marton\source\repos\Test1\Test1\Test1\obj\Debug\netstandard2.0\Test1.csprojAssemblyReference.cache
 C:\Users\Marton\source\repos\Test1\Test1\Test1\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\Marton\source\repos\Test1\Test1\Test1\obj\Debug\netstandard2.0\Grid.xaml.g.cs
 C:\Users\Marton\source\repos\Test1\Test1\Test1\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
@@ -16,3 +15,4 @@ C:\Users\Marton\source\repos\Test1\Test1\Test1\obj\Debug\netstandard2.0\Test1.dl
 C:\Users\Marton\source\repos\Test1\Test1\Test1\obj\Debug\netstandard2.0\ref\Test1.dll
 C:\Users\Marton\source\repos\Test1\Test1\Test1\obj\Debug\netstandard2.0\Test1.pdb
 C:\Users\Marton\source\repos\Test1\Test1\Test1\obj\Debug\netstandard2.0\Test1.csproj.CoreCompileInputs.cache
+C:\Users\Marton\source\repos\Test1\Test1\Test1\obj\Debug\netstandard2.0\Test1.csprojAssemblyReference.cache

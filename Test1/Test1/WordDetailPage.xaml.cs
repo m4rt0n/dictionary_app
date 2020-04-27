@@ -24,8 +24,6 @@ namespace Test1
 
         public ObservableCollection<Word> Words { get; set; }
 
-        // can only delete the item if it exists in repo and/or collection
-        // if id is 0, it is a new item
         public bool CanDelete
         {
             get
@@ -34,9 +32,6 @@ namespace Test1
             }
         }
 
-        // Passing reference to context item and the reference to collection.
-        // Since the collection is passed, the ID of the context 
-        // item would be enough here instead of the item itself.
         public WordDetailPage(Word context, ObservableCollection<Word> words)
         {
             InitializeComponent();
@@ -46,26 +41,19 @@ namespace Test1
 
         private void Edit_Clicked(object sender, EventArgs e)
         {
-            // pass on the references
             Navigation.PushAsync(new WordEditPage(Context, Words));
         }
 
         private async void Delete_Clicked(object sender, EventArgs e)
         {
-            // propt user
             var result = await DisplayAlert("Delete", "Sure?", "Yes", "No");
 
             if (result)
             {
-                // delete from repository
                 await App.Repo.DeleteItemAsync(Context);
-                // delete from items collection
                 Words.Remove(Context);
-
                 await Navigation.PopAsync();
             }
-        }
-
-        
+        }        
     }
 }

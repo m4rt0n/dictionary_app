@@ -10,12 +10,9 @@
         <ToolbarItem Text="ADD" Clicked="Add_Clicked"/>
         <ToolbarItem Text="GRID" Clicked="Grid_Clicked"/>
     </ContentPage.ToolbarItems>
-
-    <!--Bindings on top level refer to BindingContext-->
     <StackLayout>
         <SearchBar x:Name="SearchBar" SearchButtonPressed="Search_Clicked" ></SearchBar>
         <ListView x:Name="listView" ItemsSource="{Binding Words}" ItemTapped="ListView_ItemTapped" SelectionMode="None">
-            <!--Bindings here refer to one item of the collection-->
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -43,6 +40,5 @@
             </ListView.ItemTemplate>
         </ListView>
     </StackLayout>
-
 </ContentPage>
 

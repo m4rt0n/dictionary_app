@@ -6,6 +6,5 @@
              mc:Ignorable="d"
              x:Class="Test1.App">
     <Application.Resources>
-
     </Application.Resources>
 </Application>
